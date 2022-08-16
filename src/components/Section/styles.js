@@ -12,6 +12,13 @@ export const Container = styled.section`
         justify-content: ${justifyContent ? justifyContent : "unset"};
         align-items: ${alignItems ? alignItems : "unset"};
 
+        @media only screen and (max-width: 1200px) {
+        padding: ${theme.spacings[14]} ${theme.spacings[4]};
+        }
+        @media only screen and (max-width: 600px) {
+        padding: ${theme.spacings[8]} ${theme.spacings[2]};
+        }
+
 
         }
 

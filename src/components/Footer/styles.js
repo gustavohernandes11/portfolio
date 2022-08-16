@@ -6,6 +6,9 @@ export const Container = styled.footer`
         background: ${theme.colors.surface};
         color: grey;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: ${theme.spacings[4]};
     `}
 `;

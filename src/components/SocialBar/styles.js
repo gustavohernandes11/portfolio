@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.nav`
     ${({ theme }) => css`
-        path {
+        * {
             color: ${theme.colors.text};
         }
         `}

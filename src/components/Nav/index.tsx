@@ -14,11 +14,11 @@ export const Nav = () => {
             <Link href="#contact-me-section">
                 <Button>Contact-me</Button>
             </Link>
-            <Link href="">
-                <Button>
-                    Blog ↗
-                </Button>
-            </Link>
+            {/* <Link href="" passHref>
+                <a href="" target="_blank" rel="noreferrer">
+                    <Button>Blog ↗</Button>
+                </a>
+            </Link> */}
         </Styled.Container>
     );
 };
