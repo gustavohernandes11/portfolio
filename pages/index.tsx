@@ -34,7 +34,7 @@ const Home: NextPage = () => {
     return (
         <>
             <Header />
-            <Section main={true} alignItems="center" id="first-section">
+            <Section align="center" id="first-section">
                 <Fade>
                     <Modal>
                         <AvatarImage
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                     </Modal>
                 </Fade>
             </Section>
-            <Section id="about-me-section" alignItems="center" color="#202020">
+            <Section id="about-me-section" align="center" color="#202020">
                 <Heading as="h2">Sobre</Heading>
                 <Grid
                     xs={12}
@@ -167,8 +167,7 @@ const Home: NextPage = () => {
             </Section>
             <Section
                 id="projects-section"
-                full={true}
-                alignItems="center"
+                align="center"
                 color="#141414"
             >
                 <Heading as="h2">Projetos</Heading>
@@ -229,7 +228,7 @@ const Home: NextPage = () => {
                     />
                 </Grid>
             </Section>
-            <Section id="contact-me-section" alignItems="center">
+            <Section id="contact-me-section" align="center">
                 <Heading as="h2">Contato</Heading>
                 <Typography>Whatsapp: 017 99656-0749</Typography>
                 <Typography>Email: gustavo.hernandes.s11@gmail.com</Typography>

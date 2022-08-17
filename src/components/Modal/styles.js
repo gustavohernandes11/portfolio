@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-    ${({ theme, alignItems, justifyContent }) => css`
+    ${({ theme, alignItems = "center", justifyContent = "center" }) => css`
         background-color: ${theme.colors.surface};
         border-radius: 10px;
         padding: ${theme.spacings[5]};
@@ -9,7 +9,7 @@ export const Container = styled.div`
 
         display: flex;
         flex-direction: column;
-        justify-content: ${justifyContent ? justifyContent : "center"};
-        align-items: ${alignItems ? alignItems : "center"};
+        justify-content: ${justifyContent};
+        align-items: ${alignItems};
     `}
 `;

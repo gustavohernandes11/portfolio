@@ -1,35 +1,33 @@
 import * as Styled from "./styles.js";
 
-interface SectionType {
+export interface SectionType {
+    justify?: string;
+    align?: string;
     children: React.ReactNode;
-    full?: boolean;
-    justifyContent?: string;
+    className?: string;
     color?: string;
-    alignItems?: string;
-    name?: string;
-    id?: string | undefined;
-    main?: boolean | undefined;
+    id?: string;
 }
 
 export const Section = ({
     children,
-    full,
+    className,
+    justify,
     color,
-    justifyContent,
-    alignItems,
-    name,
+    align,
     id,
-    main,
 }: SectionType): JSX.Element => {
+    const styles = {
+        justify: justify,
+        align: align,
+    };
     return (
         <Styled.Container
+            {...styles}
+
+            className={className}
             color={color}
-            full={full}
-            justifyContent={justifyContent}
-            alignItems={alignItems}
-            name={name}
             id={id}
-            main={main}
         >
             {children}
         </Styled.Container>

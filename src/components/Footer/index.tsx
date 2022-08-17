@@ -2,7 +2,7 @@ import * as Styled from "./styles.js";
 import { Typography } from "@mui/material";
 import { SocialBar } from "../SocialBar";
 
-export const Footer = ({ children }: any) => {
+export const Footer = () => {
     return (
         <Styled.Container>
             <SocialBar />
