@@ -32,10 +32,6 @@ export default class MyDocument extends Document {
         return (
             <Html lang="pt-BR">
                 <Head>
-                    <meta name="language" content="Portuguese" />
-                    <meta name="revisit-after" content="3 days" />
-                    <meta name="author" content="Gustavo Hernandes" />
-
                     {/* Fonte Century Gothic */}
                     <link
                         rel="stylesheet"

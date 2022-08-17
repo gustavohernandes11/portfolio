@@ -5,20 +5,13 @@ import { Footer } from "../src/components/Footer";
 import { AvatarImage } from "../src/components/AvatarImage";
 import { ProjectModal } from "../src/components/ProjectModal";
 import { Modal } from "../src/components/Modal";
+import { Seo } from "../src/components/Seo";
 import { Section } from "../src/components/Section";
 import { SocialBar } from "../src/components/SocialBar";
 import { Header } from "../src/components/Header";
 import { Fade } from "@mui/material";
 
-import {
-    Grid,
-    Chip,
-    Typography,
-    Box,
-    Container,
-    Stack,
-    List,
-} from "@mui/material";
+import { Grid, Chip, Typography } from "@mui/material";
 
 import IllustrationImage from "../src/assets/imgs/Hot beverage.png";
 import annotareIMG from "../src/assets/imgs/projects/annotareFullscreen.png";
@@ -33,8 +26,9 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
     return (
         <>
+        <Seo/>
             <Header />
-            <Section align="center" id="first-section">
+            <Section alignItems="center" id="first-section">
                 <Fade>
                     <Modal>
                         <AvatarImage
@@ -49,7 +43,7 @@ const Home: NextPage = () => {
                     </Modal>
                 </Fade>
             </Section>
-            <Section id="about-me-section" align="center" color="#202020">
+            <Section id="about-me-section" alignItems="center" color="#202020">
                 <Heading as="h2">Sobre</Heading>
                 <Grid
                     xs={12}
@@ -165,11 +159,7 @@ const Home: NextPage = () => {
                     </Grid>
                 </Grid>
             </Section>
-            <Section
-                id="projects-section"
-                align="center"
-                color="#141414"
-            >
+            <Section id="projects-section" alignItems="center" color="#141414">
                 <Heading as="h2">Projetos</Heading>
                 <Grid xs={12} container mt={1} spacing={4}>
                     <ProjectModal
@@ -228,7 +218,7 @@ const Home: NextPage = () => {
                     />
                 </Grid>
             </Section>
-            <Section id="contact-me-section" align="center">
+            <Section id="contact-me-section" alignItems="center">
                 <Heading as="h2">Contato</Heading>
                 <Typography>Whatsapp: 017 99656-0749</Typography>
                 <Typography>Email: gustavo.hernandes.s11@gmail.com</Typography>
