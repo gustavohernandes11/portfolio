@@ -10,10 +10,13 @@ export const Modal = ({
     justifyContent,
     className,
 }: ModalType) => {
+    const styles = {
+        justifyContent: justifyContent,
+        alignItems: alignItems,
+    };
     return (
         <Styled.Container
-            justifyContent={justifyContent}
-            alignItems={alignItems}
+            {...styles}
             className={className}
         >
             {children}

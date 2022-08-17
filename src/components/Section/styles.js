@@ -1,15 +1,15 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.section`
-    ${({ theme, color, justify = "unset", align = "unset" }) => css`
+    ${({ theme, color, justifyContent = "unset", alignItems = "unset" }) => css`
         color: ${theme.colors.text};
         padding: ${theme.spacings[14]};
         background-color: ${color ? color : theme.colors.background};
 
         display: flex;
         flex-direction: column;
-        justify-content: ${justify};
-        align-items: ${align};
+        justify-content: ${justifyContent};
+        align-items: ${alignItems};
 
         @media only screen and (max-width: 1200px) {
         padding: ${theme.spacings[14]} ${theme.spacings[4]};

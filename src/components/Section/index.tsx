@@ -1,8 +1,8 @@
 import * as Styled from "./styles.js";
 
 export interface SectionType {
-    justify?: string;
-    align?: string;
+    justifyContent?: string;
+    alignItems?: string;
     children: React.ReactNode;
     className?: string;
     color?: string;
@@ -12,14 +12,14 @@ export interface SectionType {
 export const Section = ({
     children,
     className,
-    justify,
+    justifyContent,
     color,
-    align,
+    alignItems,
     id,
 }: SectionType): JSX.Element => {
     const styles = {
-        justify: justify,
-        align: align,
+        justifyContent: justifyContent,
+        alignItems: alignItems,
     };
     return (
         <Styled.Container
