@@ -13,7 +13,6 @@ todo.txt
 
 # next.js
 /.next/
-/out/
 
 
 # production
@@ -37,3 +36,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# Local Netlify folder
+.netlify
