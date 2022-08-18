@@ -5,11 +5,9 @@ import { Footer } from "../src/components/Footer";
 import { AvatarImage } from "../src/components/AvatarImage";
 import { ProjectModal } from "../src/components/ProjectModal";
 import { Modal } from "../src/components/Modal";
-import { Seo } from "../src/components/Seo";
 import { Section } from "../src/components/Section";
 import { SocialBar } from "../src/components/SocialBar";
 import { Header } from "../src/components/Header";
-import { Fade } from "@mui/material";
 
 import { Grid, Chip, Typography } from "@mui/material";
 
@@ -26,22 +24,19 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
     return (
         <>
-        <Seo/>
             <Header />
             <Section alignItems="center" id="first-section">
-                <Fade>
-                    <Modal>
-                        <AvatarImage
-                            src="https://github.com/gustavohernandes11.png"
-                            alt="Foto de perfil do autor"
-                        />
-                        <Heading>Gustavo Hernandes</Heading>
-                        <Typography mt={1} mb={1}>
-                            Estudante de desenvolvimento web e engenharia.
-                        </Typography>
-                        <SocialBar />
-                    </Modal>
-                </Fade>
+                <Modal>
+                    <AvatarImage
+                        src="https://github.com/gustavohernandes11.png"
+                        alt="Foto de perfil do autor"
+                    />
+                    <Heading>Gustavo Hernandes</Heading>
+                    <Typography mt={1} mb={1}>
+                        Estudante de desenvolvimento web e engenharia.
+                    </Typography>
+                    <SocialBar />
+                </Modal>
             </Section>
             <Section id="about-me-section" alignItems="center" color="#202020">
                 <Heading as="h2">Sobre</Heading>

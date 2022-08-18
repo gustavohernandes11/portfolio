@@ -32,6 +32,15 @@ export default class MyDocument extends Document {
         return (
             <Html lang="pt-BR">
                 <Head>
+                    <meta name="title" content="Gustavo Hernandes | Dev" />
+                    <meta
+                        name="description"
+                        content="Portfolio de um desenvolvedor de sites e sistemas para web."
+                    />
+                    <meta
+                        name="keywords"
+                        content="Javascript, Css, HTML, React, Typescript, Development, Design, Styled-Components, Nodejs, Node, API, Next, Nextjs"
+                    />
                     {/* Fonte Century Gothic */}
                     <link
                         rel="stylesheet"

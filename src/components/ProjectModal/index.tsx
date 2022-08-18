@@ -37,14 +37,13 @@ export const ProjectModal = ({
                 className="scale-in-center"
             >
                 <Container disableGutters={true}>
-                    <Image
-                        placeholder="blur"
+                    {/* <Image
                         src={imageSrc}
                         alt={imageAlt}
                         width={400}
                         height={200}
                         layout="intrinsic"
-                    />
+                    /> */}
                 </Container>
                 <Heading as="h3">{projectName}</Heading>
                 <Typography mt={2} mb={2}>

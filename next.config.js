@@ -8,8 +8,7 @@ const nextConfig = {
     trailingSlash: true,
     images: {
         domains: ["github.com"],
-        loader: "imgix",
-        path: "/",
+
     },
 };
 
