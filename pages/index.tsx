@@ -24,7 +24,8 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
     return (
         <>
-            <Header />
+            <h1>Header</h1>
+            {/* <Header />
             <Section alignItems="center" id="first-section">
                 <Modal>
                     <AvatarImage
@@ -218,7 +219,7 @@ const Home: NextPage = () => {
                 <Typography>Whatsapp: 017 99656-0749</Typography>
                 <Typography>Email: gustavo.hernandes.s11@gmail.com</Typography>
             </Section>
-            <Footer />
+            <Footer /> */}
         </>
     );
 };

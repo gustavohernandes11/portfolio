@@ -8,8 +8,19 @@ const nextConfig = {
     trailingSlash: true,
     images: {
         domains: ["github.com"],
+        unoptimized: true,
+        loader: "imgix",
+        path: "/",
 
     },
+    exportPathMap: async function(
+        defaultPathMap,
+        { dev, dir, outDir, distDir, buildId }
+      ) {
+        return {
+          "/": { page: "/" },
+        };
+      }
 };
 
 module.exports = nextConfig;
