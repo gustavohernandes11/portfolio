@@ -19,7 +19,13 @@ export const AvatarImage = ({
     return (
         <Styled.Wrapper>
             <Styled.Container color={color} id={id} className={className}>
-                <Image width="250" height="250" src={src} alt={alt}></Image>
+                <Image
+                    priority
+                    width="250"
+                    height="250"
+                    src={src}
+                    alt={alt}
+                ></Image>
             </Styled.Container>
         </Styled.Wrapper>
     );

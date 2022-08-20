@@ -43,6 +43,7 @@ export const ProjectModal = ({
                         width={400}
                         height={200}
                         layout="intrinsic"
+                        placeholder="blur"
                     />
                 </Container>
                 <Heading as="h3">{projectName}</Heading>
