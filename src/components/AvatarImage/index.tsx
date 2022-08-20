@@ -25,7 +25,8 @@ export const AvatarImage = ({
                     height="250"
                     src={src}
                     alt={alt}
-                ></Image>
+                    unoptimized={true}
+                />
             </Styled.Container>
         </Styled.Wrapper>
     );

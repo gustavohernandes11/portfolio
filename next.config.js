@@ -8,12 +8,9 @@ const nextConfig = {
     trailingSlash: true,
     images: {
         domains: ["github.com"],
-        unoptimized: true,
 
-        loader: "imgix",
-        path: "/"
     },
-    
+
 };
 
 module.exports = nextConfig;
