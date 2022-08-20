@@ -10,6 +10,8 @@ const nextConfig = {
         domains: ["github.com"],
         unoptimized: true,
 
+        loader: "imgix",
+        path: "/"
     },
     
 };
