@@ -6,13 +6,13 @@ export const Nav = () => {
     return (
         <Styled.Container>
             <Link href="#about-me-section">
-                <Button>About</Button>
+                <Button>Sobre</Button>
             </Link>
             <Link href="#projects-section">
-                <Button>Projects</Button>
+                <Button>Projetos</Button>
             </Link>
             <Link href="#contact-me-section">
-                <Button>Contact-me</Button>
+                <Button>Contato</Button>
             </Link>
             {/* <Link href="" passHref>
                 <a href="" target="_blank" rel="noreferrer">
