@@ -13,7 +13,7 @@ describe("<Heading />", () => {
         });
         expect(heading).toMatchInlineSnapshot(`
             <h1
-              class="styles__Element-sc-f7plp0-0 dQmDPh"
+              class="sc-bczRLJ fecJmk"
             >
               Texto para teste
             </h1>
