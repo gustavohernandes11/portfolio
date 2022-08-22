@@ -1,4 +1,4 @@
-import * as Styled from "./styles.js";
+import * as Styled from "./styles";
 import type { SectionType } from "../Section";
 
 interface ModalType extends SectionType {

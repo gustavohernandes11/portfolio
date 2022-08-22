@@ -1,4 +1,4 @@
-import * as Styled from "./styles.js";
+import * as Styled from "./styles";
 import { Github, Linkedin, Facebook } from "@styled-icons/boxicons-logos";
 import { IconButton } from "@mui/material";
 import Link from "next/link";

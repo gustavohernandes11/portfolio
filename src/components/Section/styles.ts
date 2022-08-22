@@ -1,7 +1,9 @@
 import styled, { css } from "styled-components";
+import { ContainerInterface } from "utils/types";
+import type { SectionType } from './index'
 
 export const Container = styled.section`
-    ${({ theme, color, justifyContent = "unset", alignItems = "unset" }) => css`
+    ${({ theme, color, justifyContent = "unset", alignItems = "unset" }: ContainerInterface) => css`
         color: ${theme.colors.text};
         padding: ${theme.spacings[14]};
         background-color: ${color ? color : theme.colors.background};

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-
+import type { ContainerInterface } from '../../utils/types'
 export const Container = styled.div`
-    ${({ theme, alignItems = "center", justifyContent = "center" }) => css`
+    ${({ theme, alignItems = "center", justifyContent = "center" }: ContainerInterface) => css`
         background-color: ${theme.colors.surface};
         border-radius: 10px;
         padding: ${theme.spacings[5]};

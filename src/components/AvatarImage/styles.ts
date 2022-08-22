@@ -1,7 +1,9 @@
 import styled, { css } from "styled-components";
 
+
+
 export const Container = styled.div`
-    ${({ theme }) => css`
+    ${({ theme }: any) => css`
         background: ${theme.colors.surfaceGradient};
         border-radius: 50%;
         border: 5px solid ${theme.colors.text};

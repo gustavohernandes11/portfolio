@@ -12,6 +12,7 @@ interface ProjectModalType {
     githubUrl?: string;
     imageSrc: string | StaticImageData;
     imageAlt: string;
+    placeholder?: "blur" | "empty";
 }
 
 export const ProjectModal = ({
@@ -21,6 +22,7 @@ export const ProjectModal = ({
     githubUrl,
     imageSrc,
     imageAlt,
+    placeholder = 'blur',
 }: ProjectModalType): JSX.Element => {
     return (
         <Grid
@@ -43,7 +45,7 @@ export const ProjectModal = ({
                         width={400}
                         height={200}
                         layout="intrinsic"
-                        placeholder="blur"
+                        placeholder={placeholder}
                     />
                 </Container>
                 <Heading as="h3">{projectName}</Heading>

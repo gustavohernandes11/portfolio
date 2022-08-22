@@ -1,9 +1,9 @@
-import * as Styled from "./styles.js";
+import * as Styled from "./styles";
 import Image from "next/image";
 
 interface AvatarImageType {
     color?: string;
-    id?: string | undefined;
+    id?: string;
     src: string;
     alt: string;
     className?: string;

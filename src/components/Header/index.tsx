@@ -1,6 +1,6 @@
 import { Heading } from "components/Heading";
 import { Nav } from "components/Nav";
-import * as Styled from "./styles.js";
+import * as Styled from "./styles";
 
 export const Header = () => {
     return (
