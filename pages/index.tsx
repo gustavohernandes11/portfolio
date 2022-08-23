@@ -8,6 +8,7 @@ import { Modal } from "../src/components/Modal";
 import { Section } from "../src/components/Section";
 import { SocialBar } from "../src/components/SocialBar";
 import { Header } from "../src/components/Header";
+import { Seo } from "../src/components/Seo";
 
 import { Grid, Chip, Typography } from "@mui/material";
 
@@ -24,6 +25,7 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
     return (
         <>
+            <Seo />
             <Header />
             <Section alignItems="center" id="first-section">
                 <Modal>
