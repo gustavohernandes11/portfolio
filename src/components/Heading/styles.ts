@@ -15,6 +15,8 @@ export const Wrapper = styled.h1`
 
         margin: ${theme.spacings[5]} 0;
 
-        
+        @media screen and (max-width: 700px) { 
+            text-align: center;
+         }
     `}
 `;
