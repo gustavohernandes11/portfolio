@@ -5,7 +5,6 @@ import * as Styled from "./styles";
 export const Header = () => {
     return (
         <>
-            <title>Gustavo Hernandes | Dev</title>
             <Styled.Container>
                 <Heading>Gu!</Heading>
                 <Nav />
