@@ -1,7 +1,11 @@
 import styled, { css } from "styled-components";
-import type { ContainerInterface } from '../../utils/types'
+import type { ContainerInterface } from "../../utils/types";
 export const Container = styled.div`
-    ${({ theme, alignItems = "center", justifyContent = "center" }: ContainerInterface) => css`
+    ${({
+        theme,
+        alignItems = "center",
+        justifyContent = "center",
+    }: ContainerInterface) => css`
         background-color: ${theme.colors.surface};
         border-radius: 10px;
         padding: ${theme.spacings[5]};
@@ -11,5 +15,11 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: ${justifyContent};
         align-items: ${alignItems};
+        transition: all .3s;
+
+        :hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
     `}
 `;

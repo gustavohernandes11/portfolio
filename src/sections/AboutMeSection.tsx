@@ -8,7 +8,6 @@ import IllustrationImage from "../assets/imgs/Hot beverage.png";
 export const AboutMeSection = () => {
     return (
         <Section id="about-me-section" alignItems="center" color="#202020">
-            <Heading as="h2">Sobre</Heading>
             <Grid xs={12} container mt={1} justifyContent="center" spacing={4}>
                 <Grid xs={12} sm={5} item justifyContent="center">
                     <Image
@@ -20,7 +19,7 @@ export const AboutMeSection = () => {
                     />
                 </Grid>
                 <Grid xs={12} sm={7} item justifyContent="center">
-                    <Heading as="h3">Quem sou</Heading>
+                    <Heading as="h2">Sobre</Heading>{" "}
                     <Typography paragraph>
                         Meu nome é <strong>Gustavo Hernandes</strong>, sou do
                         interior de São Paulo, tenho 19 anos e atualmente estou

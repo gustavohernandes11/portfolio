@@ -22,7 +22,7 @@ export const ProjectModal = ({
     githubUrl,
     imageSrc,
     imageAlt,
-    placeholder = 'blur',
+    placeholder = "blur",
 }: ProjectModalType): JSX.Element => {
     return (
         <Grid

@@ -10,8 +10,10 @@ export const Container = styled.label`
         border: 1px solid ${theme.colors.primary};
         border-radius: 5px;
         margin: 2px;
-        color: ${color ? color : theme.colors.primaryVariant};
+        color: ${color ? color : theme.colors.text};
         display: flex;
+        flex-grow: 1;
+        justify-content: center;
     `}
 `;
 
