@@ -71,7 +71,7 @@ export const ProjectModal = ({
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <Button variant="contained">Deploy</Button>
+                                <Button variant="contained">Ver ↗</Button>
                             </a>
                         </Link>
                     )}

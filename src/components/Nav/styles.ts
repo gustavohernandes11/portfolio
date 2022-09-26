@@ -16,6 +16,17 @@ export const Container = styled.nav`
         color: ${theme.colors.text};
 
         }
-        
+        #drawer-nav-buttons {
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px){
+        #drawer-nav-buttons {
+            display: block;
+        }
+        #nav-buttons {
+            display: none;
+        }
+}
     `}
 `;

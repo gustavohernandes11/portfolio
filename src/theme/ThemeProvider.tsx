@@ -17,27 +17,27 @@ interface ThemePropTypes {
 
 export function Theme({ children }: ThemePropTypes) {
     const [state, actions] = useGlobalContext();
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        setLoading(() => true);
-        const storagedTheme = localStorage.getItem("storagedTheme");
+    // useEffect(() => {
+    //     setLoading(() => true);
+    //     const storagedTheme = localStorage.getItem("storagedTheme");
 
-        if (storagedTheme === null || undefined) {
-            localStorage.setItem("storagedTheme", "dark");
-            actions.changeTheme("dark");
-        } else {
-            actions.changeTheme(storagedTheme);
-        }
-        setLoading(() => false);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    //     if (storagedTheme === null || undefined) {
+    //         localStorage.setItem("storagedTheme", "dark");
+    //         actions.changeTheme("dark");
+    //     } else {
+    //         actions.changeTheme(storagedTheme);
+    //     }
+    //     setLoading(() => false);
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, []);
 
-    function getTheme() {
-        return state.activeTheme === "dark" ? darkMUITheme : lightMUITheme;
-    }
+    // function getTheme() {
+    //     return state.activeTheme === "dark" ? darkMUITheme : lightMUITheme;
+    // }
     return (
-        <ThemeProvider theme={getTheme}>
+        <ThemeProvider theme={darkMUITheme}>
             {loading ? (
                 <CircularProgress className="loading-page-spin" />
             ) : (

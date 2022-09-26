@@ -19,7 +19,6 @@ export const Container = styled.div`
 
         :hover {
             transform: scale(1.02);
-            cursor: pointer;
         }
     `}
 `;
