@@ -5,7 +5,7 @@ export const Seo = () => {
     return (
         <Head>
             <meta name="title" content="Gustavo Hernandes | Dev" />
-            <title>Gustavo Hernandes | Dev</title>
+            <title>Gustavo Hernandes</title>
             <meta
                 name="description"
                 content="Portfolio de um desenvolvedor de sites e sistemas para web."

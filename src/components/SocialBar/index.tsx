@@ -1,5 +1,5 @@
 import * as Styled from "./styles";
-import { Github, Linkedin, Facebook } from "@styled-icons/boxicons-logos";
+import { Github, Linkedin } from "@styled-icons/boxicons-logos";
 import { IconButton } from "@mui/material";
 import Link from "next/link";
 
@@ -16,11 +16,7 @@ export const SocialBar = () => {
                     <Linkedin height={25} width={25} />
                 </IconButton>
             </Link>
-            <Link href="https://www.facebook.com/profile.php?id=100013794438299">
-                <IconButton>
-                    <Facebook height={25} width={25} />
-                </IconButton>
-            </Link>
+
         </Styled.Container>
     );
 };

@@ -2,56 +2,39 @@ import { Section } from "../components/Section";
 import { Heading } from "../components/Heading";
 import { Chip, ChipWrapper } from "../components/Chip";
 import { Typography, Grid } from "@mui/material";
-import Image from "next/image";
-import IllustrationImage from "../assets/imgs/Hot beverage.png";
+
+import { Typescript, Html5, Css3, Strapi, Vuedotjs, ReactLogo, Styledcomponents, Nextdotjs, Postgresql, Git, Nodedotjs } from '@styled-icons/simple-icons';
 
 export const AboutMeSection = () => {
     return (
         <Section id="about-me-section" alignItems="center" color="#202020">
-            <Grid xs={12} container mt={1} justifyContent="center" spacing={4}>
-                <Grid xs={12} sm={5} item justifyContent="center">
-                    <Image
-                        src={IllustrationImage}
-                        alt="Illustration image"
-                        width={866}
-                        height={683}
-                        layout="responsive"
-                    />
-                </Grid>
-                <Grid xs={12} sm={7} item justifyContent="center">
-                    <Heading as="h2">Sobre</Heading>{" "}
+            <Grid xs={12} sm={7} container justifyContent="center">
+                    <Heading as="h2">Sobre</Heading>
                     <Typography paragraph>
-                        Meu nome é <strong>Gustavo Hernandes</strong>, sou do
-                        interior de São Paulo, tenho 19 anos e atualmente estou
+                        Meu nome é <strong>Gustavo Hernandes</strong>, sou de Suzanápolis - SP, tenho 19 anos e atualmente estou
                         cursando
-                        <b> Engenharia de Produção</b> e paralelamente estudo
+                        <b> Engenharia de Produção</b> enquanto paralelamente trabalho e estudo tecnologias de
                         <strong> Desenvolvimento Web</strong>.
                     </Typography>
-                    <Typography paragraph>
-                        Meu foco sempre foi a Stack <strong>Frontend</strong>,
-                        porém busco aprender linguagens backend como complemento
-                        para entender conceitos importantes na produção de um
-                        software.
-                    </Typography>
+                   
                     <Heading as="h3">Tecnologias</Heading>
                     <ChipWrapper>
-                        <Chip label="Typescript/Javascript" />
-                        <Chip label="Html" />
-                        <Chip label="Css" />
-                        <Chip label="React" />
+                        <Chip label="Typescript/Javascript" icon={<Typescript size={15} />} />
+                        <Chip label="Html" icon={<Html5 size={15} />}/>
+                        <Chip label="Css" icon={<Css3 size={15} />}/>
+                        <Chip label="React" icon={<ReactLogo size={15} />}/>
 
-                        <Chip label="Node" />
-                        <Chip label="Vue" />
-                        <Chip label="Next.js" />
-                        <Chip label="Styled-components" />
-                        <Chip label="Material Ui" />
+                        <Chip label="Node" icon={<Nodedotjs size={15} />}/>
+                        <Chip label="Vue" icon={<Vuedotjs size={15} />}/>
+                        <Chip label="Next.js" icon={<Nextdotjs size={15} />}/>
+                        <Chip label="Styled-components" icon={<Styledcomponents size={15} />}/>
+                        <Chip label="Material Ui"/>
 
-                        <Chip label="Strapi" />
-                        <Chip label="PostgreSQL" />
-                        <Chip label="Git/Github" />
+                        <Chip label="Strapi" icon={<Strapi size={15} />}/>
+                        <Chip label="PostgreSQL" icon={<Postgresql size={15} />}/>
+                        <Chip label="Git/Github" icon={<Git size={15} />}/>
                     </ChipWrapper>
                 </Grid>
-            </Grid>
         </Section>
     );
 };

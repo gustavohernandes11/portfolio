@@ -7,13 +7,21 @@ interface ContainerInterface {
 export const Container = styled.label`
     ${({ theme, color }: ContainerInterface) => css`
         padding: 10px;
-        border: 1px solid ${theme.colors.primary};
+        /* border: 2px solid #2254c5; */
+        background: ${theme.colors.surface};
+        color: ${color ? color : theme.colors.text};
+        gap: 10px;
         border-radius: 5px;
         margin: 2px;
-        color: ${color ? color : theme.colors.text};
         display: flex;
         flex-grow: 1;
+        align-items: center;
         justify-content: center;
+
+        path {
+        color: ${theme.colors.primaryVariant};
+
+        }
     `}
 `;
 

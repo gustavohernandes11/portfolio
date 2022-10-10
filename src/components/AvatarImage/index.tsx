@@ -17,7 +17,6 @@ export const AvatarImage = ({
     className,
 }: AvatarImageType) => {
     return (
-        <Styled.Wrapper>
             <Styled.Container color={color} id={id} className={className}>
                 <Image
                     priority
@@ -28,6 +27,5 @@ export const AvatarImage = ({
                     unoptimized={true}
                 />
             </Styled.Container>
-        </Styled.Wrapper>
     );
 };

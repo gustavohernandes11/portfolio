@@ -12,27 +12,16 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        transition: all 300ms ease-in-out;
 
         width: 250px;
         height: 250px;
-
+        
         img {
             border-radius: 50%;
         }
-    `}
-`;
-
-export const Wrapper = styled.div`
-    ${({ theme }) => css`
-        /* background: ${theme.colors.gradient};
-        border-radius: 50%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        width: 260px;
-        height: 260px; */
+        :hover {
+            transform: scale(1.02);
+        }
     `}
 `;
