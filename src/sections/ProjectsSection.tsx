@@ -4,6 +4,7 @@ import { Heading } from "../components/Heading";
 import { Grid } from "@mui/material";
 
 import annotareIMG from "../assets/imgs/projects/annotareFullscreen.png";
+import blogHernandesImage from "../assets/imgs/projects/blogHernandesImage.jpeg";
 import landingPageIMG from "../assets/imgs/projects/landing-page-exemple.png";
 import crudvueIMG from "../assets/imgs/projects/CRUDvue1.png";
 import memorygameIMG from "../assets/imgs/projects/memoryGameImage.png";
@@ -23,6 +24,14 @@ export const ProjectsSection = () => {
                     imageAlt="Imagem do projeto Annotare"
                     githubUrl="https://github.com/gustavohernandes11/annotare"
                     deployUrl="https://annotare.netlify.app/"
+                />
+                <ProjectModal
+                    projectName="Blog"
+                    description={`Meu "blog" para compartilhar conteúdos que estou aprendendo ou que entendo como relevantes.`}
+                    imageSrc={blogHernandesImage}
+                    imageAlt="Imagem do projeto Blog"
+                    githubUrl="https://github.com/gustavohernandes11"
+                    deployUrl="https://blog-hernandes.netlify.app/"
                 />
                 <ProjectModal
                     projectName="Landing page exemple"
