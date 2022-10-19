@@ -37,7 +37,7 @@ path {
 }
 
 strong {
-    color: #4d70cf;
+    color: rgb(132, 36, 245);
 }
 .loading-page-spin {
     align-self: center;
@@ -55,8 +55,6 @@ strong {
     padding-top: 50px;
     color: white;
 }
-
-
 
 @-webkit-keyframes scale-in-center {
     0% {
