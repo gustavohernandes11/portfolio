@@ -27,7 +27,7 @@ export const ProjectsSection = () => {
                 />
                 <ProjectModal
                     projectName="Blog"
-                    description={`Meu "blog" para compartilhar conteúdos que estou aprendendo ou que entendo como relevantes.`}
+                    description={`Blog para compartilhar conteúdos que estou aprendendo ou que entendo como relevantes.`}
                     imageSrc={blogHernandesImage}
                     imageAlt="Imagem do projeto Blog"
                     githubUrl="https://github.com/gustavohernandes11"
@@ -75,7 +75,7 @@ export const ProjectsSection = () => {
                     githubUrl="https://github.com/gustavohernandes11/notepad"
                 />
                 <ProjectModal
-                    projectName="App de cadastro de usuários (CRUD + interface)"
+                    projectName="App de cadastro de usuários"
                     description={`Projeto criado com Vue. Registra as informações da interface em um Banco de dados PostgreSQL (com Knex).`}
                     imageSrc={crudvueIMG}
                     imageAlt="Imagem do projeto cadastro de usuários"
