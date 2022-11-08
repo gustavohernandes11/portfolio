@@ -10,7 +10,7 @@ import crudvueIMG from "../assets/imgs/projects/CRUDvue1.png";
 import memorygameIMG from "../assets/imgs/projects/memoryGameImage.png";
 import notepadIMG from "../assets/imgs/projects/notepadHome.png";
 import qrcodeIMG from "../assets/imgs/projects/QRcodeImage.png";
-import githubapiIMG from "../assets/imgs/projects/search-github-profiles.png";
+import githubapiIMG from "../assets/imgs/projects/search-github-profiles.jpeg";
 
 export const ProjectsSection = () => {
     return (
@@ -65,7 +65,7 @@ export const ProjectsSection = () => {
                     imageSrc={githubapiIMG}
                     imageAlt="Imagem da tela inicial do projeto buscador de perfil do Github"
                     githubUrl="https://github.com/gustavohernandes11/search-github-profiles"
-                    deployUrl="https://searchprofilesgithub.netlify.app"
+                    deployUrl="https://searchprofilesgithub-v2.netlify.app/"
                 />
                 <ProjectModal
                     projectName="Bloco de anotações com autenticação de usuários"
