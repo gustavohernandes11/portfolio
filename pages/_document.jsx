@@ -32,12 +32,6 @@ export default class MyDocument extends Document {
         return (
             <Html lang="pt-BR">
                 <Head>
-                    {/* Fonte Century Gothic */}
-                    <link
-                        rel="stylesheet"
-                        href="https://use.typekit.net/oov2wcw.css"
-                    ></link>
-                    {/* Fonte Raleway */}
                     <link
                         rel="preconnect"
                         href="https://fonts.googleapis.com"
@@ -48,7 +42,7 @@ export default class MyDocument extends Document {
                         crossOrigin="true"
                     />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,900;1,400&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
                         rel="stylesheet"
                     />
                 </Head>

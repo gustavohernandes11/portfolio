@@ -1,12 +1,21 @@
-import * as Styled from "./styles";
-import { Typography } from "@mui/material";
-import { SocialBar } from "../SocialBar";
+import { Text } from "@chakra-ui/react";
+import React from "react";
+import { Wrapper } from "../Wrapper";
+import { GoTopButton } from "./GoTopButton";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
-        <Styled.Container>
-            <SocialBar />
-            <Typography>Created with Next.js</Typography>
-        </Styled.Container>
+        <Wrapper
+            justifyContent="space-between"
+            align="center"
+            bgColor="custom.darkGrey"
+            justify="space-between"
+            as="header"
+            padding="3rem 12rem"
+            margin={0}
+        >
+            <Text color="custom.lightGrey">© Gustavo Hernandes</Text>
+            <GoTopButton />
+        </Wrapper>
     );
 };

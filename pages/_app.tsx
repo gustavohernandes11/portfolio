@@ -1,16 +1,24 @@
-import "../src/styles/globals.css";
 import type { AppProps } from "next/app";
 
-import { Theme } from "../src/theme/ThemeProvider";
-import { GlobalContextProvider } from "../src/contexts/globalContext/GlobalContextProvider";
+import { Header } from "components/Header";
+import { Footer } from "components/Footer";
+import GlobalStyle from "../src/styles/GlobalStyles";
+
+import { theme } from "../src/theme";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <GlobalContextProvider>
-            <Theme>
-                <Component {...pageProps} />
-            </Theme>
-        </GlobalContextProvider>
+        <>
+            <ChakraProvider theme={theme}>
+                <GlobalStyle />
+                <Header />
+                <main>
+                    <Component {...pageProps} />
+                    <Footer />
+                </main>
+            </ChakraProvider>
+        </>
     );
 }
 
