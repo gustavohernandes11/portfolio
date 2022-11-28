@@ -1,40 +1,38 @@
-import { Section } from "../components/Section";
-import { Heading } from "../components/Heading";
-import { Chip, ChipWrapper } from "../components/Chip";
-import { Typography, Grid } from "@mui/material";
-
-import { Typescript, Html5, Css3, Strapi, Vuedotjs, ReactLogo, Styledcomponents, Nextdotjs, Postgresql, Git, Nodedotjs } from '@styled-icons/simple-icons';
+import { Container, Image, Text } from "@chakra-ui/react";
+import { Title } from "components/Title";
+import { Wrapper } from "components/Wrapper";
 
 export const AboutMeSection = () => {
     return (
-        <Section id="about-me-section" alignItems="center" color="#202020">
-            <Grid xs={12} sm={7} container justifyContent="center">
-                <Heading as="h2">Sobre</Heading>
-                <Typography paragraph>
-                    Meu nome é <strong>Gustavo Hernandes</strong>, sou de Suzanápolis - SP, tenho 19 anos e atualmente estou
-                    cursando
-                    <b> Engenharia de Produção</b> enquanto paralelamente trabalho e estudo tecnologias de
-                    <strong> Desenvolvimento Web</strong>.
-                </Typography>
-
-                <Heading as="h3">Tecnologias</Heading>
-                <ChipWrapper>
-                    <Chip label="Typescript/Javascript" icon={<Typescript size={15} />} />
-                    <Chip label="Html" icon={<Html5 size={15} />} />
-                    <Chip label="Css" icon={<Css3 size={15} />} />
-                    <Chip label="React" icon={<ReactLogo size={15} />} />
-
-                    <Chip label="Node" icon={<Nodedotjs size={15} />} />
-                    <Chip label="Vue" icon={<Vuedotjs size={15} />} />
-                    <Chip label="Next.js" icon={<Nextdotjs size={15} />} />
-                    <Chip label="Styled-components" icon={<Styledcomponents size={15} />} />
-                    <Chip label="Material Ui" />
-
-                    <Chip label="Strapi" icon={<Strapi size={15} />} />
-                    <Chip label="PostgreSQL" icon={<Postgresql size={15} />} />
-                    <Chip label="Git/Github" icon={<Git size={15} />} />
-                </ChipWrapper>
-            </Grid>
-        </Section>
+        <Wrapper direction="column" paddingInline="0" id="about">
+            <Title>SOBRE</Title>
+            <Container maxW="46rem">
+                <Image
+                    src="https://images.unsplash.com/photo-1669461734596-b126134d0dfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    width="100%"
+                    mb="2rem"
+                    marginInline="auto"
+                    borderRadius="6px"
+                />
+                <Text>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem rem voluptas, consequatur illum consequuntur, nisi
+                    sapiente nemo nam ducimus distinctio dicta tempore, ex quos
+                    dolor adipisci possimus quasi. Non, harum!
+                </Text>
+                <Text>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem rem voluptas, consequatur illum consequuntur, nisi
+                    sapiente nemo nam ducimus distinctio dicta tempore, ex quos
+                    dolor adipisci possimus quasi. Non, harum!
+                </Text>
+                <Text>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorem rem voluptas, consequatur illum consequuntur, nisi
+                    sapiente nemo nam ducimus distinctio dicta tempore, ex quos
+                    dolor adipisci possimus quasi. Non, harum!
+                </Text>
+            </Container>
+        </Wrapper>
     );
 };

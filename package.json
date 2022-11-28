@@ -1,6 +1,6 @@
 {
-    "name": "project-starter",
-    "version": "0.1.0",
+    "name": "portfolio",
+    "version": "0.2.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -13,14 +13,13 @@
         "coverage": "jest --coverage"
     },
     "dependencies": {
-        "@emotion/react": "^11.9.3",
-        "@emotion/styled": "^11.9.3",
-        "@mui/material": "^5.9.1",
+        "@chakra-ui/react": "^2.4.1",
+        "@emotion/react": "^11.10.5",
+        "@emotion/styled": "^11.10.5",
         "@styled-icons/boxicons-logos": "^10.38.0",
-        "@styled-icons/entypo": "^10.46.0",
-        "@styled-icons/heroicons-outline": "^10.36.0",
-        "@styled-icons/heroicons-solid": "^10.36.0",
+        "@styled-icons/feather": "^10.46.0",
         "@styled-icons/simple-icons": "^10.46.0",
+        "framer-motion": "^6.5.1",
         "jest-styled-components": "^7.0.8",
         "next": "12.2.2",
         "react": "18.2.0",

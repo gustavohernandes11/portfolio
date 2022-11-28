@@ -26,7 +26,8 @@
         "**/*.ts",
         "**/*.tsx",
         "src/components/Header/styles.js",
-        "pages/_document.jsx"
-, "src/components/Modal/Modal.test.jsx"    ],
+        "pages/_document.jsx",
+        "src/components/Modal/Modal.test.jsx"
+    ],
     "exclude": ["node_modules"]
 }

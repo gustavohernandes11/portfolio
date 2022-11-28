@@ -1,36 +1,42 @@
-import { Section } from "../components/Section";
-import { Heading } from "../components/Heading";
-import { Typography, Grid } from "@mui/material";
-import { Whatsapp } from "@styled-icons/boxicons-logos";
-import { Email } from "@styled-icons/entypo";
-import { ContactContainer } from "components/ContactContainer";
+import { Container, IconButton, Stack, Text } from "@chakra-ui/react";
+import { Title } from "components/Title";
+import { Wrapper } from "components/Wrapper";
+import { Copy, Check } from "@styled-icons/feather";
+import { useClipboard } from "@chakra-ui/react";
 
 export const ContactSection = () => {
+    const { onCopy, hasCopied } = useClipboard(
+        "gustavo.hernandes.s11@gmail.com"
+    );
     return (
-        <Section id="contact-me-section" alignItems="center">
-            <Heading as="h2">Contato</Heading>
-            <Grid
-                container
-                direction="row"
-                mt={1}
-                xs={7}
-                justifyContent="center"
-            >
-            <Typography paragraph textAlign="center">
-                Atualmente estou a disposição para te ajudar a construir
-                projetos da área. Fique a vontade para entrar em contato comigo.
-            </Typography>
-                <ContactContainer
-                    linkTo="https://wa.me/55017996560749"
-                    color="#38832e"
-                >
-                    <Whatsapp size={25} /> <p>017 99656-0749</p>
-                </ContactContainer>
-                <ContactContainer>
-                    <Email size={25} />
-                    <p>gustavo.hernandes.s11@gmail.com</p>
-                </ContactContainer>
-            </Grid>
-        </Section>
+        <>
+            <Wrapper id="contact" flexDirection="column" paddingInline={0}>
+                <Title>CONTATO</Title>
+                <Container maxW="46rem" align="center">
+                    <Text>
+                        Você pode trocar uma ideia comigo pelo email ou qualquer
+                        uma de minhas redes sociais.
+                    </Text>
+                    <Stack direction="row" justify="center" mt="1rem">
+                        <Text>
+                            gustavo.hernandes.s11@gmail.com
+                            <IconButton
+                                width="min-content"
+                                ml="1rem"
+                                colorScheme="blue"
+                                aria-label={"copy"}
+                                onClick={onCopy}
+                            >
+                                {hasCopied ? (
+                                    <Check size={20} />
+                                ) : (
+                                    <Copy size={20} />
+                                )}
+                            </IconButton>
+                        </Text>
+                    </Stack>
+                </Container>
+            </Wrapper>
+        </>
     );
 };
