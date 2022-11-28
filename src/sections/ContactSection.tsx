@@ -14,7 +14,7 @@ export const ContactSection = () => {
                 <Title>CONTATO</Title>
                 <Container maxW="46rem" align="center">
                     <Text>
-                        Você pode trocar uma ideia comigo pelo email ou qualquer
+                        Você pode trocar uma ideia comigo por email ou qualquer
                         uma de minhas redes sociais.
                     </Text>
                     <Stack direction="row" justify="center" mt="1rem">

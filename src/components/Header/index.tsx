@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
             align="center"
             bgColor="custom.darkGrey"
             as="header"
-            padding="1rem 12rem"
+            padding={["1rem 2rem", "1rem 6rem", "1rem 12rem"]}
             margin={0}
         >
             <Logo />

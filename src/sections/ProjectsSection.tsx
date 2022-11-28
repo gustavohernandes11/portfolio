@@ -32,8 +32,8 @@ export const ProjectsSection = () => {
     return (
         <Wrapper direction="column" paddingInline="0" id="projects">
             <Title>PROJETOS</Title>
-            <Container maxW="100%" paddingInline="4rem">
-                <SimpleGrid columns={[1, null, 2, 3]} spacing="1rem">
+            <Container maxW="100%" paddingInline={["2rem", null, null, "1rem"]}>
+                <SimpleGrid columns={[1, null, 2, 2, 3]} spacing="1rem">
                     <ProjectCard
                         name="Annotare - Aplicativo de anotações"
                         description={`Uma página para salvar suas anotações no armazenamento do navegador. Ele utiliza conceitos importantes de controle de estado da aplicação. Você pode mudar o tema e o layout de exibição. `}

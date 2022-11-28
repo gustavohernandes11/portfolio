@@ -11,7 +11,9 @@ export const Footer: React.FC = () => {
             bgColor="custom.darkGrey"
             justify="space-between"
             as="header"
-            padding="3rem 12rem"
+            padding={["2rem 6rem", "3rem 12rem"]}
+            flexDirection={["column", null, "row"]}
+            gap={["2rem"]}
             margin={0}
         >
             <Text color="custom.lightGrey">© Gustavo Hernandes</Text>

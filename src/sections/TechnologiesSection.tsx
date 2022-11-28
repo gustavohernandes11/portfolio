@@ -39,7 +39,10 @@ export const TechnologiesSection = () => {
                         <TechItem icon={<ReactLogo size={40} />}>
                             React
                         </TechItem>
-                        <TechItem icon={<Styledcomponents size={40} />}>
+                        <TechItem
+                            fontSize="0.8rem"
+                            icon={<Styledcomponents size={40} />}
+                        >
                             Styled-components
                         </TechItem>
                         <TechItem icon={<Postgresql size={40} />}>
@@ -54,7 +57,7 @@ export const TechnologiesSection = () => {
     );
 };
 
-export const TechItem = ({ icon, children }: any) => {
+export const TechItem = ({ icon, children, ...props }: any) => {
     return (
         <Box
             padding="1.5rem"
@@ -69,7 +72,7 @@ export const TechItem = ({ icon, children }: any) => {
             }}
         >
             <Box>{icon}</Box>
-            <Heading fontSize="1rem" mt="1rem" as="h2">
+            <Heading fontSize="1rem" mt="1rem" as="h2" {...props}>
                 {children}
             </Heading>
         </Box>
