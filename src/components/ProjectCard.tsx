@@ -65,7 +65,7 @@ export const ProjectCard = ({
                     >
                         Github
                     </Button>
-                    <Button
+                    {deployUrl && <Button
                         as="a"
                         target="_blank"
                         href={deployUrl}
@@ -73,7 +73,7 @@ export const ProjectCard = ({
                         colorScheme="blue"
                     >
                         Ver
-                    </Button>
+                    </Button>}
                 </ButtonGroup>
             </CardFooter>
         </Card>

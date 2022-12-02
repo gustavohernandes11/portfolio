@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-    max-height: 100vh;
-
+    max-width: 100vw;
     .slick-slider {
         position: relative;
 
@@ -27,7 +26,6 @@ export const Wrapper = styled.section`
         display: block;
         overflow: hidden;
 
-        margin: 0;
         padding: 0;
     }
     .slick-list:focus {
@@ -52,7 +50,8 @@ export const Wrapper = styled.section`
         top: 0;
         left: 0;
 
-        display: block;
+        display: flex;
+        align-items: center;
     }
     .slick-track:before,
     .slick-track:after {
@@ -73,6 +72,8 @@ export const Wrapper = styled.section`
 
         height: 100%;
         min-height: 1px;
+
+        padding: 0.5rem;
     }
     [dir="rtl"] .slick-slide {
         float: right;
@@ -210,6 +211,7 @@ export const Wrapper = styled.section`
     /* Dots */
     .slick-dotted.slick-slider {
         margin-bottom: 30px;
+        color: white;
     }
 
     .slick-dots {
@@ -242,7 +244,7 @@ export const Wrapper = styled.section`
         font-size: 0;
         line-height: 0;
 
-        display: block;
+        display: white;
 
         width: 20px;
         height: 20px;
@@ -279,13 +281,13 @@ export const Wrapper = styled.section`
         text-align: center;
 
         opacity: 0.25;
-        color: black;
+        color: gray;
 
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
     .slick-dots li.slick-active button:before {
         opacity: 0.75;
-        color: black;
+        color: #c3c3c3;
     }
 `;

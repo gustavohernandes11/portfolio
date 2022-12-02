@@ -1,6 +1,8 @@
 import React from "react";
 import SliderSlick from "react-slick";
 import * as S from "./styles";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface SliderType {
     children?: React.ReactNode;
@@ -10,14 +12,14 @@ export const Slider = ({ children }: SliderType) => {
     return (
         <S.Wrapper>
             <SliderSlick
-                dots={true}
                 pauseOnHover={true}
                 infinite={false}
                 centerMode={true}
                 speed={500}
                 slidesToScroll={1}
                 slidesToShow={1}
-                vertical={true}
+                dots={true}
+                arrows={false}
             >
                 {children}
             </SliderSlick>
