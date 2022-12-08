@@ -34,23 +34,14 @@ export const AboutMeSection = () => {
                     />
                 </Box>
                 <Social margin="1rem auto" />
+                <Text>Olá 👋,</Text>
                 <Text>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorem rem voluptas, consequatur illum consequuntur, nisi
-                    sapiente nemo nam ducimus distinctio dicta tempore, ex quos
-                    dolor adipisci possimus quasi. Non, harum!
-                </Text>
-                <Text>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorem rem voluptas, consequatur illum consequuntur, nisi
-                    sapiente nemo nam ducimus distinctio dicta tempore, ex quos
-                    dolor adipisci possimus quasi. Non, harum!
-                </Text>
-                <Text>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorem rem voluptas, consequatur illum consequuntur, nisi
-                    sapiente nemo nam ducimus distinctio dicta tempore, ex quos
-                    dolor adipisci possimus quasi. Non, harum!
+                    me chamo <strong>Gustavo Hernandes da Silva</strong>, tenho
+                    20 anos. Há alguns anos conheci a área da programação e me
+                    interessei pelo desenvolvimento de apllicações <b>web</b>.
+                    Nesse tempo desenvolvi vários projetos pessoais onde pude
+                    colocar em prática muito do que tenho aprendido. Como posso
+                    te ajudar?
                 </Text>
             </Container>
         </Wrapper>
