@@ -23,6 +23,7 @@ export const Title = ({ children, ...props }: TitleProps) => {
                 bgColor: "custom.blue",
                 height: "20px",
                 width: "20px",
+                borderRadius: "10px 10px 10px 0",
             }}
         >
             {children}

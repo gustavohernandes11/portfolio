@@ -10,6 +10,7 @@ const components = {
     },
     styles: {
         global: {
+            scrollBehavior: "smooth",
             h1: {
                 fontFamily: "'Ubuntu', sans-serif",
                 color: "custom.light",
@@ -44,6 +45,7 @@ const components = {
             },
             P: {
                 fontFamily: "'Ubuntu', sans-serif",
+                fontWeight: 600,
             },
             a: {
                 color: "teal.500",
@@ -57,12 +59,12 @@ const components = {
 const colors = {
     custom: {
         black: "#1E1E1E",
-        darkGrey: "#222222",
-        mediumGrey: "#393939",
-        lightGrey: "#8C8989",
+        darkGray: "#222222",
+        mediumGray: "#393939",
+        lightGray: "#8C8989",
         green: "#51A04F",
-        blue: "#8163eb",
-        lightBlue: "#B6B8DB",
+        blue: "#7e31d6",
+        lightBlue: "#a691f5",
         light: "#FFFFFF",
     },
 };

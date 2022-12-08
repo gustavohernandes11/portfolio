@@ -31,11 +31,12 @@ export const ProjectCard = ({
     description,
 }: ProjectCardProps) => {
     return (
-        <Card maxW="100%" bgColor="custom.mediumGrey" color="custom.light">
+        <Card maxW="100%" bgColor="custom.mediumGray" color="custom.light">
             <CardBody padding="1rem">
                 <Image
                     src={imageSrc}
                     alt={imageAlt}
+                    loading="lazy"
                     style={{
                         borderRadius: "6px",
                     }}
@@ -45,7 +46,12 @@ export const ProjectCard = ({
                     <Text color="gray.200">{description}</Text>
                 </Stack>
             </CardBody>
-            <CardFooter justify="space-between" padding="1rem">
+            <CardFooter
+                justify={["center", "space-between"]}
+                padding="1rem"
+                flexWrap="wrap"
+                gap="1rem"
+            >
                 <Stack
                     color="gray.200"
                     align="center"
@@ -65,15 +71,17 @@ export const ProjectCard = ({
                     >
                         Github
                     </Button>
-                    {deployUrl && <Button
-                        as="a"
-                        target="_blank"
-                        href={deployUrl}
-                        variant="solid"
-                        colorScheme="blue"
-                    >
-                        Ver
-                    </Button>}
+                    {deployUrl && (
+                        <Button
+                            as="a"
+                            target="_blank"
+                            href={deployUrl}
+                            variant="solid"
+                            colorScheme="blue"
+                        >
+                            Ver
+                        </Button>
+                    )}
                 </ButtonGroup>
             </CardFooter>
         </Card>

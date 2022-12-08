@@ -2,17 +2,16 @@ import { Text, Heading } from "@chakra-ui/react";
 
 export const Logo = () => {
     return (
-        <Heading fontSize="1.1rem" fontWeight={500} fontFamily="Ubuntu">
+        <Heading fontSize="2rem" fontFamily="Ubuntu" color="custom.light">
             G
             <Text
-                fontSize="2rem"
                 lineHeight={0}
+                fontWeight={700}
                 display="inline-block"
-                color="custom.blue"
+                color="custom.lightBlue"
             >
-                _
+                H
             </Text>
-            Hernandes
         </Heading>
     );
 };

@@ -1,4 +1,12 @@
-import { Box, Container, Heading, Icon, SimpleGrid } from "@chakra-ui/react";
+import {
+    Box,
+    Center,
+    Container,
+    Flex,
+    Heading,
+    Icon,
+    SimpleGrid,
+} from "@chakra-ui/react";
 import { Title } from "components/Title";
 import { Wrapper } from "components/Wrapper";
 import {
@@ -15,12 +23,19 @@ import {
     Chakraui,
     Bootstrap,
 } from "@styled-icons/simple-icons";
+import { ShapeDivider } from "components/ShapeDivider";
 
 export const TechnologiesSection = () => {
     return (
         <>
-            <Wrapper flexDirection="column" paddingInline={0} id="tech">
-                <Title>TECNOLOGIAS</Title>
+            <ShapeDivider color="#141414" />
+            <Wrapper
+                flexDirection="column"
+                bgColor="#252525"
+                paddingInline={0}
+                id="stack"
+            >
+                <Title>STACK</Title>
                 <Container maxW="46rem">
                     <SimpleGrid columns={3} maxW="46rem" spacing="1rem">
                         <TechItem icon={<Typescript size={40} />}>
@@ -53,6 +68,7 @@ export const TechnologiesSection = () => {
                     </SimpleGrid>
                 </Container>
             </Wrapper>
+            <ShapeDivider />
         </>
     );
 };
@@ -61,18 +77,26 @@ export const TechItem = ({ icon, children, ...props }: any) => {
     return (
         <Box
             padding="1.5rem"
-            bgColor="custom.mediumGrey"
+            bgColor="#121212"
+            color="#e9e9e9"
             borderRadius="6"
-            align="center"
-            transition="color 0.5s"
+            transition="transform 0.5s"
             _hover={{
                 cursor: "pointer",
-                color: "custom.blue",
                 bgColor: "grey.100",
+                transform: "scale(1.05)",
             }}
         >
-            <Box>{icon}</Box>
-            <Heading fontSize="1rem" mt="1rem" as="h2" {...props}>
+            <Flex margin="0px auto" justify="center" color="custom.lightBlue">
+                {icon}
+            </Flex>
+            <Heading
+                textAlign="center"
+                fontSize="1rem"
+                mt="1rem"
+                as="h2"
+                {...props}
+            >
                 {children}
             </Heading>
         </Box>

@@ -7,8 +7,6 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'Ubuntu', sans-serif;
-  
-
 }
 
 body {

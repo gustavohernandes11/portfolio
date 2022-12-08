@@ -8,8 +8,7 @@ export const Wrapper = ({ children, justifyContent, ...props }: any) => {
             as="section"
             width="100%"
             maxW="100vw"
-            padding={["2rem 3rem", "2rem 6rem", null, "2rem 12rem"]}
-            bgColor="custom.black"
+            padding={["3rem", "3rem 6rem", null, "4rem 12rem"]}
             color="custom.light"
             {...props}
         >

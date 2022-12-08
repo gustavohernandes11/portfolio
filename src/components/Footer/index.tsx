@@ -1,23 +1,26 @@
-import { Text } from "@chakra-ui/react";
+import { Social } from "components/Social";
 import React from "react";
 import { Wrapper } from "../Wrapper";
 import { GoTopButton } from "./GoTopButton";
+import { ShapeDivider } from "./ShapeDivider";
 
 export const Footer: React.FC = () => {
     return (
-        <Wrapper
-            justifyContent="space-between"
-            align="center"
-            bgColor="custom.darkGrey"
-            justify="space-between"
-            as="header"
-            padding={["2rem 6rem", "3rem 12rem"]}
-            flexDirection={["column", null, "row"]}
-            gap={["2rem"]}
-            margin={0}
-        >
-            <Text color="custom.lightGrey">© Gustavo Hernandes</Text>
-            <GoTopButton />
-        </Wrapper>
+        <>
+            <ShapeDivider />
+            <Wrapper
+                justifyContent="space-between"
+                align="center"
+                bgColor="custom.darkGray"
+                justify="space-between"
+                as="footer"
+                padding={["2rem 3rem", "2rem 6rem", null, "4rem 12rem"]}
+                gap={["2rem"]}
+                margin={0}
+            >
+                <Social />
+                <GoTopButton />
+            </Wrapper>
+        </>
     );
 };

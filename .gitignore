@@ -7,6 +7,8 @@ package-lock.json
 .pnp.js
 todo.txt
 
+/out
+/.next
 
 # testing
 /coverage
