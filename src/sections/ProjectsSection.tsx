@@ -89,7 +89,7 @@ const projectList = [
         imageSrc={blogIMG}
         imageAlt="Imagem do projeto Blog"
         githubUrl="https://github.com/gustavohernandes11"
-        deployUrl="https://blog-hernandes.netlify.app/"
+        deployUrl="https://blog-hernandes.vercel.app/"
         techSpan={
             <>
                 <Typescript size={15} />
