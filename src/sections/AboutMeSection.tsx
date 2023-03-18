@@ -17,18 +17,18 @@ export const AboutMeSection = () => {
             <Title>SOBRE</Title>
             <Container maxW="46rem">
                 <Box
-                    width={460}
+                    width={320}
                     maxWidth="90%"
                     mb="2rem"
                     marginInline="auto"
-                    borderRadius="16px"
-                    border="2px solid"
+                    borderRadius="32px"
+                    border="3px solid"
                     borderColor="custom.blue"
                 >
                     <Image
-                        width={460}
-                        height={460}
-                        style={{ borderRadius: "16px" }}
+                        width={320}
+                        height={320}
+                        style={{ borderRadius: "inherit" }}
                         alt="imagem do autor"
                         src="https://github.com/gustavohernandes11.png"
                     />
