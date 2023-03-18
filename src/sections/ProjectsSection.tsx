@@ -1,6 +1,6 @@
 import annotareIMG from "../assets/imgs/projects/annotare.png";
 import blogIMG from "../assets/imgs/projects/blog.png";
-import landingPageIMG from "../assets/imgs/projects/landing-page-exemple.png";
+import finsweetIMG from "../assets/imgs/projects/finsweet.jpeg";
 import crudvueIMG from "../assets/imgs/projects/crud-vue.png";
 import memorygameIMG from "../assets/imgs/projects/memory-game.png";
 import notepadIMG from "../assets/imgs/projects/notepad.png";
@@ -68,7 +68,8 @@ export const ProjectsSection = () => {
 
 const projectList = [
     <ProjectCard
-        name="Annotare - Aplicativo de anotações"
+        name="Annotare"
+        key="Annotare"
         description={`Uma página para salvar suas anotações no armazenamento do navegador. Você pode mudar o tema e o layout de exibição. `}
         imageSrc={annotareIMG}
         imageAlt="Imagem do projeto Annotare"
@@ -85,6 +86,7 @@ const projectList = [
 
     <ProjectCard
         name="Blog"
+        key="Blog"
         description={`Blog para compartilhar conteúdos que estou aprendendo ou que entendo como relevantes.`}
         imageSrc={blogIMG}
         imageAlt="Imagem do projeto Blog"
@@ -100,14 +102,15 @@ const projectList = [
     />,
 
     <ProjectCard
-        name="Landing page exemple"
+        name="Finsweet"
+        key="Finsweet"
         description={
-            "Site de página única para apresentação de produtos. Possui animações com Framer-Motion."
+            "Site de página única para apresentação de uma agência de negócios. Criado a partir do design em Figma."
         }
-        imageSrc={landingPageIMG}
-        imageAlt="Imagem do projeto Landing Page exemple"
-        githubUrl="https://github.com/gustavohernandes11/strapi-boilerplate-landing-page"
-        deployUrl="https://landing-page-exemple.netlify.app/"
+        imageSrc={finsweetIMG}
+        imageAlt="Imagem do projeto Finsweet"
+        githubUrl="https://github.com/gustavohernandes11/finsweet"
+        deployUrl="https://finsweet-gh.netlify.app/"
         techSpan={
             <>
                 <Nextdotjs size={15} />
@@ -119,6 +122,7 @@ const projectList = [
 
     <ProjectCard
         name="Jogo da memória"
+        key="Jogo da memória"
         description="Criado com React. É um jogo da memória com 16 cartas que contabiliza suas jogadas e sua pontuação. Acesse e jogue."
         imageSrc={memorygameIMG}
         imageAlt="Imagem do projeto jogo da memória"
@@ -135,6 +139,7 @@ const projectList = [
 
     <ProjectCard
         name="Gerador de QR code"
+        key="Gerador de QR code"
         description="Você insere qualquer valor no campo de texto e após alguns segundos é produzido um QR code de acordo com a sua mensagem."
         imageSrc={qrcodeIMG}
         imageAlt="Imagem do projeto QR-code-generator"
@@ -151,6 +156,7 @@ const projectList = [
 
     <ProjectCard
         name="Buscador de perfil do Github"
+        key="Buscador de perfil do Github"
         description="Insira um nome de usuário do github no campo de texto e será retornado algumas informações do perfil e seus repositórios."
         imageSrc={githubapiIMG}
         imageAlt="Imagem da tela inicial do projeto buscador de perfil do Github"
@@ -167,6 +173,7 @@ const projectList = [
 
     <ProjectCard
         name="Bloco de anotações com autenticação de usuários"
+        key="Bloco de anotações com autenticação de usuários"
         description="Possui tela de login e registro para usuários tela de administrador e uma interface inicial parecida com a do Annotare."
         imageSrc={notepadIMG}
         imageAlt="Tela inicial do projeto bloco de anotações"
@@ -182,6 +189,7 @@ const projectList = [
 
     <ProjectCard
         name="App de cadastro de usuários"
+        key={"App de cadastro de usuários"}
         description={`Projeto criado com Vue. Registra as informações da interface em um banco de dados PostgreSQL (com Knex).`}
         imageSrc={crudvueIMG}
         imageAlt="Imagem do projeto cadastro de usuários"
