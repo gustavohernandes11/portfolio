@@ -17,8 +17,8 @@ export const AboutMeSection = () => {
             <Title>SOBRE</Title>
             <Container maxW="46rem">
                 <Box
-                    width={320}
-                    maxWidth="90%"
+                    width="fit-content"
+                    maxWidth={["50%", "90%"]}
                     mb="2rem"
                     marginInline="auto"
                     borderRadius="32px"
