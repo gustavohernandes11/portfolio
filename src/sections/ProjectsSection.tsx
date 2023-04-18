@@ -85,13 +85,13 @@ const projectList = [
     />,
 
     <ProjectCard
-        name="Blog"
-        key="Blog"
+        name="Blog Undefined"
+        key="Blog Undefined"
         description={`Blog para compartilhar conteúdos que estou aprendendo ou que entendo como relevantes.`}
         imageSrc={blogIMG}
         imageAlt="Imagem do projeto Blog"
-        githubUrl="https://github.com/gustavohernandes11"
-        deployUrl="https://blog-hernandes.vercel.app/"
+        githubUrl="https://github.com/gustavohernandes11/blog"
+        deployUrl="https://blogundefined.netlify.app/"
         techSpan={
             <>
                 <Typescript size={15} />
