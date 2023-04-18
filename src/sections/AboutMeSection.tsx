@@ -38,7 +38,7 @@ export const AboutMeSection = () => {
                 <Text>
                     me chamo <strong>Gustavo Hernandes da Silva</strong>, tenho
                     20 anos. Há alguns anos conheci a área da programação e me
-                    interessei pelo desenvolvimento de apllicações <b>web</b>.
+                    interessei pelo desenvolvimento de aplicações <b>web</b>.
                     Nesse tempo desenvolvi vários projetos pessoais onde pude
                     colocar em prática muito do que tenho aprendido. Como posso
                     te ajudar?
