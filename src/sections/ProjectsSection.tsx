@@ -140,7 +140,7 @@ const projectList = [
     <ProjectCard
         name="Gerador de QR code"
         key="Gerador de QR code"
-        description="Você insere qualquer valor no campo de texto e após alguns segundos é produzido um QR code de acordo com a sua mensagem."
+        description="Você insere qualquer valor no campo de texto e após alguns segundos é produzido um QR code conforme a sua mensagem."
         imageSrc={qrcodeIMG}
         imageAlt="Imagem do projeto QR-code-generator"
         githubUrl="https://github.com/gustavohernandes11/qrcode-generator"
@@ -174,7 +174,7 @@ const projectList = [
     <ProjectCard
         name="Bloco de anotações com autenticação de usuários"
         key="Bloco de anotações com autenticação de usuários"
-        description="Possui tela de login e registro para usuários tela de administrador e uma interface inicial parecida com a do Annotare."
+        description="Possui tela de login e registro para usuários, tela de administrador e uma interface inicial parecida com a do Annotare."
         imageSrc={notepadIMG}
         imageAlt="Tela inicial do projeto bloco de anotações"
         githubUrl="https://github.com/gustavohernandes11/notepad"
