@@ -1,12 +1,40 @@
 import styled from "styled-components";
+import { Button } from "./Button";
+
+const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const myForm = event.target as HTMLFormElement;
+    const formData = new FormData(myForm);
+
+    const searchParams = Object.fromEntries(formData) as Record<string, string>;
+    const encodedSearchParams = new URLSearchParams(searchParams).toString();
+
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodedSearchParams,
+    })
+        .then(() => alert("Sua mensagem foi enviada! Obrigado"))
+        .catch((error: Error) => alert(error));
+};
 
 export const ContactForm = () => {
     return (
-        <StyledContactForm data-netlify="true">
+        <StyledContactForm
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            onSubmit={handleSubmit}
+        >
             <SmallSpan>
+                <Input type="hidden" name="form-name" value="contact" />
+
                 <Label htmlFor="name-input">Nome</Label>
                 <Input
                     type="text"
+                    minLength={3}
+                    maxLength={300}
                     placeholder="Nome"
                     name="name-input"
                     id="name-input"
@@ -16,6 +44,9 @@ export const ContactForm = () => {
                 <Label htmlFor="email-input">Email</Label>
                 <Input
                     type="email"
+                    minLength={5}
+                    maxLength={50}
+                    pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
                     placeholder="@gmail.com"
                     name="email-input"
                     id="email-input"
@@ -25,13 +56,14 @@ export const ContactForm = () => {
                 <Label htmlFor="message-input">Mensagem</Label>
                 <Textarea
                     name="message-input"
+                    minLength={10}
                     placeholder="Hello World!"
                     id="message-input"
                 />
             </LargeSpan>
-            <ButtonSpan>
+            <JustifyRight>
                 <Button type="submit">Enviar</Button>
-            </ButtonSpan>
+            </JustifyRight>
         </StyledContactForm>
     );
 };
@@ -56,7 +88,7 @@ const LargeSpan = styled.span`
 const SmallSpan = styled.span`
     grid-column: span 1;
 `;
-const ButtonSpan = styled(LargeSpan)`
+const JustifyRight = styled(LargeSpan)`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -80,17 +112,4 @@ const Textarea = styled.textarea`
     resize: vertical;
     min-height: 4rem;
     max-height: 14rem;
-`;
-
-const Button = styled.button`
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    border: none;
-
-    :hover {
-        background-color: #161616;
-    }
 `;
