@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import React from "react";
 
-export const Title = ({ children }: any) => {
-    return <StyledHeading>{children}</StyledHeading>;
+export const Title = ({ children, ...props }: any) => {
+    return <StyledHeading {...props}>{children}</StyledHeading>;
 };
 
 const StyledHeading = styled.h2`

@@ -14,7 +14,7 @@ export const NavLink = ({ children, href, onClick }: NavLinkProps) => {
         </StyledLink>
     );
 };
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
     position: relative;
     margin-bottom: 1rem;
     color: #000;

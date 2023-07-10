@@ -17,7 +17,6 @@ export const Nav = () => {
 
     return (
         <>
-            {/* Responsivo */}
             <ResponsiveNav>
                 <IconButton
                     onClick={toggleMenu}
@@ -27,7 +26,6 @@ export const Nav = () => {
                 />
             </ResponsiveNav>
 
-            {/* Modal Drawer */}
             {isMenuOpen && (
                 <MenuDrawer className={isMenuOpen ? "open" : ""}>
                     <MenuContent>
@@ -56,7 +54,6 @@ export const Nav = () => {
                 </MenuDrawer>
             )}
 
-            {/* Não responsivo */}
             <DesktopNav>
                 <NavLink href="#home">INÍCIO</NavLink>
                 <NavLink href="#about">SOBRE</NavLink>
