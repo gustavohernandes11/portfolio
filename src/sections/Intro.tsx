@@ -7,6 +7,14 @@ type IntroType = {
     name: string;
     title: string;
 };
+const scrollDown = () => {
+    const scrollTo = 0.8 * window.innerHeight;
+
+    window.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
+    });
+};
 
 export const Intro = ({ name, title }: IntroType) => {
     return (
@@ -18,9 +26,11 @@ export const Intro = ({ name, title }: IntroType) => {
             </Container>
             <Container>
                 <GoDownButton>
-                    <a href="#about">
-                        <IconButton size={25} icon={ChevronsDown} />
-                    </a>
+                    <IconButton
+                        onClick={scrollDown}
+                        size={25}
+                        icon={ChevronsDown}
+                    />
                 </GoDownButton>
             </Container>
         </IntroContainer>

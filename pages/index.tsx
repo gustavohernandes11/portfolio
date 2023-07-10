@@ -2,7 +2,6 @@ import type { GetStaticProps, NextPage } from "next";
 import React from "react";
 
 import { Seo } from "../src/components/Seo";
-
 import { Intro } from "../src/sections/Intro";
 import { AboutMe } from "../src/sections/AboutMe";
 import { Projects } from "../src/sections/Projects";

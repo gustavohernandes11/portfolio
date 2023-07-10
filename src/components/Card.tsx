@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
+import { Button } from "./Button";
 
 export type Image = {
     alt: string;
@@ -41,14 +42,19 @@ export const Card = ({
             </Body>
             <Footer>
                 {githubUrl && (
-                    <a href={githubUrl} target="_blank">
-                        <GithubButton>Github</GithubButton>
-                    </a>
+                    <Button
+                        as="a"
+                        href={githubUrl}
+                        variant="light"
+                        target="_blank"
+                    >
+                        Github
+                    </Button>
                 )}
                 {deployUrl && (
-                    <a href={deployUrl} target="_blank">
-                        <DeployButton>Conferir</DeployButton>
-                    </a>
+                    <Button as="a" href={deployUrl} target="_blank">
+                        Conferir
+                    </Button>
                 )}
             </Footer>
         </Container>
@@ -80,23 +86,4 @@ const Footer = styled.div`
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
-`;
-const GithubButton = styled.button`
-    font-size: 1rem;
-    padding: 1rem;
-    border: none;
-    background-color: transparent;
-    border-radius: 0.25rem;
-
-    :hover {
-        cursor: pointer;
-    }
-`;
-const DeployButton = styled(GithubButton)`
-    background-color: black;
-    color: white;
-    :hover {
-        cursor: pointer;
-        background-color: #161616;
-    }
 `;
