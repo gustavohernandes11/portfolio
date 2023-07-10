@@ -3,21 +3,19 @@ import type { AppProps } from "next/app";
 import { Header } from "components/Header";
 import { Footer } from "components/Footer";
 import GlobalStyle from "../src/styles/GlobalStyles";
-
-import { theme } from "../src/theme";
-import { ChakraProvider } from "@chakra-ui/react";
+import { CogAnimation } from "components/CogAnimation";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
-            <ChakraProvider theme={theme}>
-                <GlobalStyle />
-                <Header />
-                <main>
-                    <Component {...pageProps} />
-                    <Footer />
-                </main>
-            </ChakraProvider>
+            <GlobalStyle />
+
+            <Header />
+            <main>
+                <CogAnimation />
+                <Component {...pageProps} />
+                <Footer />
+            </main>
         </>
     );
 }

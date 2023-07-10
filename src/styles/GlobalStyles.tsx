@@ -7,11 +7,22 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'Ubuntu', sans-serif;
+ 
 }
-
 body {
   min-height: 100vh;
-
+    ::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  ::-webkit-scrollbar-track {
+  background-color: #ececec;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #030303;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #161616;
+  }
 }
 
 html,

@@ -1,10 +1,10 @@
-import { Stack, IconButton, Icon } from "@chakra-ui/react";
 import { Github, Linkedin } from "@styled-icons/simple-icons";
 import React from "react";
+import { IconButton } from "./IconButton";
 
-export const Social = ({ ...props }) => {
+export const Social = () => {
     return (
-        <Stack direction="row" justify="center" {...props}>
+        <span>
             <SocialIconButton
                 icon={Github}
                 href="https://github.com/gustavohernandes11"
@@ -13,7 +13,7 @@ export const Social = ({ ...props }) => {
                 icon={Linkedin}
                 href="https://www.linkedin.com/in/gustavo-hernandes11/"
             />
-        </Stack>
+        </span>
     );
 };
 type SocialIconProps = {
@@ -22,20 +22,8 @@ type SocialIconProps = {
 };
 const SocialIconButton = ({ icon, href }: SocialIconProps) => {
     return (
-        <IconButton
-            as="a"
-            href={href}
-            target="_blank"
-            aria-label={`${icon} button link`}
-            colorScheme="white"
-            color="whiteAlpha.500"
-            variant="ghost"
-            _hover={{
-                color: "white",
-                // bgColor: "purple.900",
-            }}
-        >
-            <Icon fontSize={30} fontWeight={900} as={icon} />
-        </IconButton>
+        <a href={href}>
+            <IconButton icon={icon} size={20} />
+        </a>
     );
 };

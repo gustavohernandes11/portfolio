@@ -1,4 +1,5 @@
-import { Link } from "@chakra-ui/react";
+import Link from "next/link";
+import styled from "styled-components";
 
 type NavLinkProps = {
     children: React.ReactNode;
@@ -8,19 +9,38 @@ type NavLinkProps = {
 
 export const NavLink = ({ children, href, onClick }: NavLinkProps) => {
     return (
-        <Link
-            onClick={onClick}
-            fontSize="1rem"
-            fontWeight={700}
-            href={href}
-            transition="color 0.2s"
-            color="gray.200"
-            _hover={{
-                cursor: "pointer",
-                color: "custom.blue",
-            }}
-        >
+        <StyledLink href={href} onClick={onClick}>
             {children}
-        </Link>
+        </StyledLink>
     );
 };
+export const StyledLink = styled.a`
+    position: relative;
+    margin-bottom: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    @media (min-width: 768px) {
+        padding: 0.25rem;
+        margin: 0 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+
+        ::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        :hover::after {
+            transform: scaleX(1);
+        }
+    }
+`;

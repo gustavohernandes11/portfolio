@@ -1,5 +1,5 @@
-import { IconButton, Tooltip } from "@chakra-ui/react";
 import { ArrowUp } from "@styled-icons/feather";
+import { IconButton } from "components/IconButton";
 import React from "react";
 
 const handleClick = () => {
@@ -14,19 +14,11 @@ const handleClick = () => {
 
 export const GoTopButton = () => {
     return (
-        <Tooltip label="Voltar para o topo">
-            <IconButton
-                onClick={handleClick}
-                colorScheme="blackAlpha"
-                aria-label={"Voltar para o topo"}
-                transition="transform 0.3s"
-                _hover={{
-                    cursor: "pointer",
-                    transform: "scale(1.1)",
-                }}
-            >
-                <ArrowUp size={20} />
-            </IconButton>
-        </Tooltip>
+        <IconButton
+            onClick={handleClick}
+            aria-label={"Voltar para o topo"}
+            icon={ArrowUp}
+            size={20}
+        />
     );
 };

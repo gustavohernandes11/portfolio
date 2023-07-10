@@ -1,29 +1,36 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import React from "react";
 
 import { Seo } from "../src/components/Seo";
 
-import { AboutMeSection } from "../src/sections/AboutMeSection";
-import { TechnologiesSection } from "../src/sections/TechnologiesSection";
-import { ProjectsSection } from "../src/sections/ProjectsSection";
-import { ContactSection } from "../src/sections/ContactSection";
-import { Container } from "@chakra-ui/react";
+import { Intro } from "../src/sections/Intro";
+import { AboutMe } from "../src/sections/AboutMe";
+import { Projects } from "../src/sections/Projects";
+import { Contact } from "../src/sections/Contact";
+import { Main } from "components/Main";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({
+    data: { name, about, title, projects, meta },
+}: any) => {
     return (
-        <Container
-            width="100%"
-            maxW="100vw"
-            bg="linear-gradient(#141414, #161616);"
-            p={0}
-        >
-            <Seo />
-            <AboutMeSection />
-            <TechnologiesSection />
-            <ProjectsSection />
-            <ContactSection />
-        </Container>
+        <Main>
+            <Seo meta={meta} />
+            <Intro name={name} title={title} />
+            <AboutMe aboutme={about} />
+            <Projects projects={projects} />
+            <Contact />
+        </Main>
     );
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+    const url = `${process.env.PAYLOAD_CMS_URL}/api/globals/portfolio`;
+    const data = await fetch(url).then((data) => data.json());
+    return {
+        props: {
+            data,
+        },
+    };
+};

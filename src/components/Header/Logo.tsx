@@ -1,17 +1,11 @@
-import { Text, Heading } from "@chakra-ui/react";
+import Image from "next/image";
+import LogoIMG from "../../../public/favicon-32x32.png";
+import Link from "next/link";
 
 export const Logo = () => {
     return (
-        <Heading fontSize="2rem" fontFamily="Ubuntu" color="custom.light">
-            G
-            <Text
-                lineHeight={0}
-                fontWeight={700}
-                display="inline-block"
-                color="custom.lightBlue"
-            >
-                H
-            </Text>
-        </Heading>
+        <Link href="home">
+            <Image alt="logo" src={LogoIMG} height={32} width={32} />
+        </Link>
     );
 };
