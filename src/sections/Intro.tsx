@@ -8,7 +8,7 @@ type IntroType = {
     title: string;
 };
 const scrollDown = () => {
-    const scrollTo = 0.8 * window.innerHeight;
+    const scrollTo = window.innerHeight;
 
     window.scrollTo({
         top: scrollTo,

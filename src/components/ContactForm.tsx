@@ -32,6 +32,7 @@ export const ContactForm = () => {
 
                 <Label htmlFor="name-input">Nome</Label>
                 <Input
+                    required
                     type="text"
                     minLength={3}
                     maxLength={300}
@@ -43,6 +44,7 @@ export const ContactForm = () => {
             <SmallSpan>
                 <Label htmlFor="email-input">Email</Label>
                 <Input
+                    required
                     type="email"
                     minLength={5}
                     maxLength={50}
@@ -55,6 +57,7 @@ export const ContactForm = () => {
             <LargeSpan>
                 <Label htmlFor="message-input">Mensagem</Label>
                 <Textarea
+                    required
                     name="message-input"
                     minLength={10}
                     placeholder="Hello World!"
@@ -87,6 +90,10 @@ const LargeSpan = styled.span`
 `;
 const SmallSpan = styled.span`
     grid-column: span 1;
+
+    @media (max-width: 768px) {
+        grid-column: span 2;
+    }
 `;
 const JustifyRight = styled(LargeSpan)`
     display: flex;

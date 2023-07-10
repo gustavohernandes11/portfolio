@@ -22,6 +22,6 @@ const StyledTextContainer = styled.div`
     text-align: center;
     margin-inline: auto;
     @media (max-width: 768px) {
-        padding: 1rem;
+        padding-inline: 1rem;
     }
 `;
