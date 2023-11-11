@@ -8,7 +8,7 @@ type IntroType = {
     title: string;
 };
 const scrollDown = () => {
-    const scrollTo = window.innerHeight;
+    const scrollTo = window.innerHeight - 150;
 
     window.scrollTo({
         top: scrollTo,
@@ -68,9 +68,12 @@ const IntroContainer = styled.section`
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 7rem;
+    @media (max-width: 768px) {
+        justify-content: space-between;
+    }
 `;
 
 const Container = styled.div`

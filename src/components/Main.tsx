@@ -5,9 +5,7 @@ export const Main = ({ children }: any) => {
 };
 
 export const StyledMain = styled.main`
-    max-width: 50rem;
-    margin: auto;
-    padding: 1rem;
+    margin: clamp(1rem, 2vw, 5rem);
 
     @media (max-width: 768px) {
         max-width: unset;

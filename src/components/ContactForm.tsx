@@ -15,7 +15,10 @@ const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encodedSearchParams,
     })
-        .then(() => alert("Sua mensagem foi enviada! Obrigado"))
+        .then(() => {
+            alert("Sua mensagem foi enviada! Obrigado.");
+            myForm.reset();
+        })
         .catch((error: Error) => alert(error));
 };
 
