@@ -1,26 +1,9 @@
 import styled from "styled-components";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import { Button } from "./Button";
 import { Chip } from "./Chip";
-
-export type Image = {
-    alt: string;
-    url: string | StaticImageData;
-    width: number;
-    height: number;
-};
-export type Tag = {
-    name: string;
-};
-export type ProjectType = {
-    title: string;
-    description: string;
-    deployUrl?: string;
-    githubUrl?: string;
-    image: Image;
-    tags: Tag[];
-};
+import { ProjectType } from "../../types/ProjectType";
 
 export const Project = ({
     title,

@@ -1,4 +1,5 @@
-import { Project, ProjectType } from "components/Project";
+import { Project } from "components/Project";
+import { ProjectType } from "../../types/ProjectType";
 import { SectionContainer } from "components/SectionContainer";
 import { Title } from "components/Title";
 import { StaticImageData } from "next/image";
