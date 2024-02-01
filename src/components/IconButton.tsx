@@ -1,4 +1,4 @@
-import React, { Attributes, ComponentType } from "react";
+import React from "react";
 import styled from "styled-components";
 
 export const IconButton = ({ onClick, icon, ...props }: any) => {

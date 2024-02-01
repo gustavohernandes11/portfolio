@@ -4,15 +4,14 @@ import styled from "styled-components";
 import serialize from "utils/serialize";
 
 type AboutMeType = {
-    // to resolve
-    aboutme: any;
+    content: any;
 };
 
-export const AboutMe = ({ aboutme }: AboutMeType) => {
+export const AboutMe = ({ content }: AboutMeType) => {
     return (
         <SectionContainer>
             <Title id="about">SOBRE</Title>
-            <StyledTextContainer>{serialize(aboutme)}</StyledTextContainer>
+            <StyledTextContainer>{serialize(content)}</StyledTextContainer>
         </SectionContainer>
     );
 };

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ChevronsDown } from "@styled-icons/feather";
 import { Social } from "components/Social";
 import { IconButton } from "components/IconButton";
