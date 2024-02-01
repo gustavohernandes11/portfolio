@@ -1,15 +1,13 @@
+import styled from "styled-components";
 import { Logo } from "./Logo";
 import { Nav } from "./Nav";
-import styled from "styled-components";
 
-export const Header: React.FC = () => {
-    return (
-        <StyledHeader>
-            <Logo />
-            <Nav />
-        </StyledHeader>
-    );
-};
+export const Header: React.FC = () => (
+    <StyledHeader>
+        <Logo />
+        <Nav />
+    </StyledHeader>
+);
 
 export const StyledHeader = styled.header`
     position: fixed;

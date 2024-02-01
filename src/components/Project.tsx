@@ -47,7 +47,7 @@ export const Project = ({
                     <p>{description}</p>
                     <ChipContainer>
                         {tags?.map((tag) => (
-                            <Chip key={tag.name}>{tag.name}</Chip>
+                            <Chip key={tag.name} text={tag.name} />
                         ))}
                     </ChipContainer>
                 </Body>

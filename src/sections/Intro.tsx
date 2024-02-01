@@ -16,26 +16,24 @@ const scrollDown = () => {
     });
 };
 
-export const Intro = ({ name, title }: IntroType) => {
-    return (
-        <IntroContainer>
-            <Container>
-                <IntroTitle id="home">{name}</IntroTitle>
-                <p>{title}</p>
-                <Social />
-            </Container>
-            <Container>
-                <GoDownButton>
-                    <IconButton
-                        onClick={scrollDown}
-                        size={25}
-                        icon={ChevronsDown}
-                    />
-                </GoDownButton>
-            </Container>
-        </IntroContainer>
-    );
-};
+export const Intro = ({ name, title }: IntroType) => (
+    <IntroContainer>
+        <Container>
+            <IntroTitle id="home">{name}</IntroTitle>
+            <p>{title}</p>
+            <Social />
+        </Container>
+        <Container>
+            <GoDownButton>
+                <IconButton
+                    onClick={scrollDown}
+                    size={25}
+                    icon={ChevronsDown}
+                />
+            </GoDownButton>
+        </Container>
+    </IntroContainer>
+);
 
 const GoDownButton = styled.a`
     padding: 2rem;

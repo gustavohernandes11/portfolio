@@ -1,8 +1,8 @@
-import styled from "styled-components";
 import { Menu as MenuIcon, X } from "@styled-icons/feather";
-import React, { useState } from "react";
-import { NavLink } from "./NavLink";
 import { IconButton } from "components/IconButton";
+import { useState } from "react";
+import styled from "styled-components";
+import { NavLink } from "./NavLink";
 
 export const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

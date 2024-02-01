@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import CogSvg from "../../public/CogIcon.svg";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import CogSvg from "../../public/CogIcon.svg";
 
 export const CogAnimation = () => {
     const [rotation, setRotation] = useState(0);

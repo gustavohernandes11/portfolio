@@ -7,13 +7,12 @@ type NavLinkProps = {
     onClick?: () => void;
 };
 
-export const NavLink = ({ children, href, onClick }: NavLinkProps) => {
-    return (
-        <StyledLink href={href} onClick={onClick}>
-            {children}
-        </StyledLink>
-    );
-};
+export const NavLink = ({ children, href, onClick }: NavLinkProps) => (
+    <StyledLink href={href} onClick={onClick}>
+        {children}
+    </StyledLink>
+);
+
 export const StyledLink = styled(Link)`
     position: relative;
     margin-bottom: 1rem;

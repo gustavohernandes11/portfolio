@@ -7,14 +7,12 @@ type AboutMeType = {
     content: any;
 };
 
-export const AboutMe = ({ content }: AboutMeType) => {
-    return (
-        <SectionContainer>
-            <Title id="about">SOBRE</Title>
-            <StyledTextContainer>{serialize(content)}</StyledTextContainer>
-        </SectionContainer>
-    );
-};
+export const AboutMe = ({ content }: AboutMeType) => (
+    <SectionContainer>
+        <Title id="about">SOBRE</Title>
+        <StyledTextContainer>{serialize(content)}</StyledTextContainer>
+    </SectionContainer>
+);
 
 const StyledTextContainer = styled.div`
     max-width: 30rem;

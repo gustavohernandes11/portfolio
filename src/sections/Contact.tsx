@@ -3,16 +3,15 @@ import { SectionContainer } from "components/SectionContainer";
 import { Title } from "components/Title";
 import styled from "styled-components";
 
-export const Contact = () => {
-    return (
-        <SectionContainer>
-            <Title id="contact">CONTATO</Title>
-            <SmallContainer>
-                <ContactForm />
-            </SmallContainer>
-        </SectionContainer>
-    );
-};
+export const Contact = () => (
+    <SectionContainer>
+        <Title id="contact">CONTATO</Title>
+        <SmallContainer>
+            <ContactForm />
+        </SmallContainer>
+    </SectionContainer>
+);
+
 const SmallContainer = styled.div`
     max-width: 50rem;
     margin-inline: auto;

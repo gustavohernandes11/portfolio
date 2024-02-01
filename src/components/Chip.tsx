@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 type ChipType = {
-    children: string;
+    text: string;
 };
-export const Chip = ({ children }: ChipType) => {
-    return <Container>{children}</Container>;
-};
+export const Chip = ({ text }: ChipType) => <Container>{text}</Container>;
 
 const Container = styled.div`
     padding: 0.5rem;

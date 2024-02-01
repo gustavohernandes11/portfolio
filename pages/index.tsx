@@ -15,7 +15,7 @@ const Home: NextPage = ({
         <Main>
             <Seo meta={meta} />
             <Intro name={name} title={title} />
-            <AboutMe aboutme={about} />
+            <AboutMe content={about} />
             <Projects projects={projects} />
             <Contact />
         </Main>
