@@ -3,8 +3,6 @@ import escapeHTML from "escape-html";
 import { Text } from "slate";
 import Image from "next/image";
 
-// eslint-disable-next-line no-use-before-define
-
 const serialize = (children) =>
     children.map((node, i) => {
         if (Text.isText(node)) {
