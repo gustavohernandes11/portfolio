@@ -9,6 +9,7 @@
         "forceConsistentCasingInFileNames": true,
         "downlevelIteration": true,
         "noEmit": true,
+        "noUnusedLocals": true,
         "esModuleInterop": true,
         "module": "esnext",
         "moduleResolution": "node",
@@ -34,7 +35,7 @@
     "plugins": [
         {
             "name": "typescript-styled-plugin",
-            "tags": ["styled", "css" /*and others that you like it!*/]
+            "tags": ["styled", "css"]
         }
     ]
 }
