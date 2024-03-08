@@ -1,9 +1,8 @@
 import type { AppProps } from "next/app";
 
-import { Header } from "components/Header";
 import { Footer } from "components/Footer";
+import { Header } from "components/Header";
 import GlobalStyle from "../src/styles/GlobalStyles";
-import { CogAnimation } from "components/CogAnimation";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -12,7 +11,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
             <Header />
             <main>
-                <CogAnimation />
                 <Component {...pageProps} />
                 <Footer />
             </main>

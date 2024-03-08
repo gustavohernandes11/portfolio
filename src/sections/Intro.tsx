@@ -9,7 +9,7 @@ type IntroType = {
 };
 
 export const Intro = ({ name, title }: IntroType) => (
-    <SectionContainer direction="row">
+    <SectionContainer>
         <Content>
             <Logo />
             <div>
