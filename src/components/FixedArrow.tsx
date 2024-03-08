@@ -89,6 +89,7 @@ export const StyledFixedArrow = styled.button`
     right: 10rem;
     background-color: transparent;
     border: none;
+    z-index: 100;
 
     :focus {
         border-radius: 100%;
