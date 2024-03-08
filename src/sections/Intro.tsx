@@ -1,82 +1,36 @@
-import styled from "styled-components";
-import { ChevronsDown } from "@styled-icons/feather";
+import { Logo } from "components/Header/Logo";
+import { SectionContainer } from "components/SectionContainer";
 import { Social } from "components/Social";
-import { IconButton } from "components/IconButton";
+import styled from "styled-components";
 
 type IntroType = {
     name: string;
     title: string;
 };
-const scrollDown = () => {
-    const scrollTo = window.innerHeight - 150;
-
-    window.scrollTo({
-        top: scrollTo,
-        behavior: "smooth",
-    });
-};
 
 export const Intro = ({ name, title }: IntroType) => (
-    <IntroContainer>
-        <Container>
-            <IntroTitle id="home">{name}</IntroTitle>
-            <p>{title}</p>
+    <SectionContainer direction="row">
+        <Content>
+            <Logo />
+            <div>
+                <Title id="home">{name}</Title>
+                <p>{title}</p>
+            </div>
             <Social />
-        </Container>
-        <Container>
-            <GoDownButton>
-                <IconButton
-                    onClick={scrollDown}
-                    size={25}
-                    icon={ChevronsDown}
-                />
-            </GoDownButton>
-        </Container>
-    </IntroContainer>
+        </Content>
+    </SectionContainer>
 );
 
-const GoDownButton = styled.a`
-    padding: 2rem;
-    box-sizing: content-box;
-    border: none;
-    background-color: transparent;
-    animation: floating 3s ease-in-out infinite;
-
-    @keyframes floating {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
+const Title = styled.h1`
+    font-size: 6rem;
+    font-weight: bolder;
+    margin: 0;
 `;
 
-const IntroTitle = styled.h1`
-    font-size: 3rem;
-    text-align: center;
-    margin: 0.5rem;
-`;
-
-const IntroContainer = styled.section`
-    min-height: calc(100vh - 10rem);
-    padding: 2rem;
+const Content = styled.div`
+    margin: auto 8rem;
+    max-width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 7rem;
-    @media (max-width: 768px) {
-        justify-content: space-between;
-    }
-`;
-
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
 `;

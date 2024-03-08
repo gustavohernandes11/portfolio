@@ -1,9 +1,23 @@
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 
-export const SectionContainer = ({ children }: any) => {
-    return <Container>{children}</Container>;
+interface SectionContainerProps {
+    children: React.ReactNode;
+    direction?: CSSProperties["flexDirection"];
+}
+
+export const SectionContainer = ({
+    children,
+    direction,
+}: SectionContainerProps) => {
+    return <Container direction={direction}>{children}</Container>;
 };
 
-export const Container = styled.section`
-    margin-top: 5rem;
+interface ContainerProps {
+    direction?: CSSProperties["flexDirection"];
+}
+
+export const Container = styled.section<ContainerProps>`
+    min-height: 100vh;
+    display: flex;
+    flex-direction: ${({ direction }) => direction || "column"};
 `;

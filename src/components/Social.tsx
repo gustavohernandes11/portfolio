@@ -23,7 +23,7 @@ export const Social = () => (
 const SocialIconButton = ({ icon, href }: SocialIconProps) => {
     return (
         <a href={href}>
-            <IconButton icon={icon} size={20} />
+            <IconButton icon={icon} size={45} />
         </a>
     );
 };
