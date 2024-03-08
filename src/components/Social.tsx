@@ -1,5 +1,4 @@
-import { Github, Linkedin } from "@styled-icons/simple-icons";
-import React from "react";
+import { Github, Leetcode, Linkedin } from "@styled-icons/simple-icons";
 import { IconButton } from "./IconButton";
 
 type SocialIconProps = {
@@ -16,6 +15,10 @@ export const Social = () => (
         <SocialIconButton
             icon={Linkedin}
             href="https://www.linkedin.com/in/gustavo-hernandes11/"
+        />
+        <SocialIconButton
+            icon={Leetcode}
+            href="https://leetcode.com/hernandes11/"
         />
     </span>
 );
