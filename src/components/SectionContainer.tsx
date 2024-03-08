@@ -1,29 +1,66 @@
-import styled, { CSSProperties } from "styled-components";
+import styled, { CSSProperties, css } from "styled-components";
 
 interface SectionContainerProps {
     children: React.ReactNode;
     direction?: CSSProperties["flexDirection"];
+    minHeight?: React.CSSProperties["minHeight"];
+    dottedBackground?: boolean;
+    center?: boolean;
     id?: string;
 }
 
 export const SectionContainer = ({
     children,
     direction,
+    dottedBackground = false,
     id,
+    center,
 }: SectionContainerProps) => {
     return (
-        <Container direction={direction} id={id}>
+        <Container
+            dottedBackground={dottedBackground}
+            center={center}
+            direction={direction}
+            id={id}
+        >
             {children}
         </Container>
     );
 };
 
-interface ContainerProps {
-    direction?: CSSProperties["flexDirection"];
-}
-
-export const Container = styled.section<ContainerProps>`
-    min-height: 100vh;
+const Container = styled.section<SectionContainerProps>`
+    min-height: ${({ minHeight }) => minHeight || "100vh"};
     display: flex;
     flex-direction: ${({ direction }) => direction || "column"};
+
+    ${({ dottedBackground }) =>
+        dottedBackground &&
+        css`
+            --dot-bg: white;
+            --dot-color: #b1b1b1;
+            --dot-size: 2px;
+            --dot-space: 22px;
+
+            background: linear-gradient(
+                        90deg,
+                        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+                        transparent 1%
+                    )
+                    center / var(--dot-space) var(--dot-space),
+                linear-gradient(
+                        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+                        transparent 1%
+                    )
+                    center / var(--dot-space) var(--dot-space),
+                var(--dot-color);
+
+            background-attachment: fixed;
+        `}
+    ${({ center }) =>
+        center &&
+        css`
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        `}
 `;

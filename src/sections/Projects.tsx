@@ -1,8 +1,8 @@
 import { Project } from "components/Project";
-import { ProjectType } from "../../types/ProjectType";
 import { SectionContainer } from "components/SectionContainer";
 import { Title } from "components/Title";
 import { StaticImageData } from "next/image";
+import { ProjectType } from "../../types/ProjectType";
 
 export type Image = {
     alt: string;
@@ -16,7 +16,7 @@ type ProjectsType = {
 };
 
 export const Projects = ({ projects }: ProjectsType) => (
-    <SectionContainer>
+    <SectionContainer dottedBackground>
         <Title id="projects">PROJETOS</Title>
         {projects.map((proj) => (
             <Project

@@ -9,7 +9,7 @@ type AboutMeType = {
 };
 
 export const AboutMe = ({ content }: AboutMeType) => (
-    <SectionContainer>
+    <SectionContainer center>
         <Animate type="slideIn">
             <Title id="about">SOBRE</Title>
         </Animate>
@@ -20,9 +20,11 @@ export const AboutMe = ({ content }: AboutMeType) => (
 );
 
 const StyledTextContainer = styled.div`
-    max-width: 30rem;
+    max-width: 40rem;
     text-align: center;
     margin-inline: auto;
+    font-size: 1.25rem;
+
     @media (max-width: 768px) {
         padding-inline: 1rem;
     }
