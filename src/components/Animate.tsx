@@ -42,6 +42,7 @@ const Animate = ({ children, type }: AnimateProps) => {
 
 const StyledAnimate = styled.div<{ inView: boolean; type: string }>`
     ${({ inView, type }) => css`
+        display: unset;
         transition: all 750ms;
         opacity: ${inView ? "100%" : "0"};
         transform: ${inView
