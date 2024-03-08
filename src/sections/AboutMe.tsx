@@ -1,3 +1,4 @@
+import Animate from "components/Animate";
 import { SectionContainer } from "components/SectionContainer";
 import { Title } from "components/Title";
 import styled from "styled-components";
@@ -9,8 +10,12 @@ type AboutMeType = {
 
 export const AboutMe = ({ content }: AboutMeType) => (
     <SectionContainer>
-        <Title id="about">SOBRE</Title>
-        <StyledTextContainer>{serialize(content)}</StyledTextContainer>
+        <Animate type="slideIn">
+            <Title id="about">SOBRE</Title>
+        </Animate>
+        <Animate type="slideIn">
+            <StyledTextContainer>{serialize(content)}</StyledTextContainer>
+        </Animate>
     </SectionContainer>
 );
 

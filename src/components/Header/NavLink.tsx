@@ -7,18 +7,29 @@ type NavLinkProps = {
     onClick?: () => void;
 };
 
-export const NavLink = ({ children, href, onClick }: NavLinkProps) => (
-    <StyledLink href={href} onClick={onClick}>
-        {children}
-    </StyledLink>
-);
+export const NavLink = ({ children, href, onClick }: NavLinkProps) => {
+    return (
+        <StyledLink
+            className="observeInView"
+            active={false}
+            href={href}
+            onClick={onClick}
+        >
+            {children}
+        </StyledLink>
+    );
+};
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)<{ active: boolean }>`
     position: relative;
     margin-bottom: 1rem;
-    color: #000;
+    color: ${({ active }) => (active ? "purple" : "black")};
     text-decoration: none;
     font-size: 1.5rem;
+
+    [inView="true"] {
+        color: red;
+    }
 
     @media (min-width: 768px) {
         padding: 0.25rem;
@@ -33,7 +44,7 @@ export const StyledLink = styled(Link)`
             bottom: -2px;
             width: 100%;
             height: 2px;
-            background-color: #000;
+            background-color: "black";
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }

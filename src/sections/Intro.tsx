@@ -1,4 +1,5 @@
-import { Logo } from "components/Header/Logo";
+import Animate from "components/Animate";
+import { Logo } from "components/Logo";
 import { SectionContainer } from "components/SectionContainer";
 import { Social } from "components/Social";
 import styled from "styled-components";
@@ -9,14 +10,16 @@ type IntroType = {
 };
 
 export const Intro = ({ name, title }: IntroType) => (
-    <SectionContainer>
+    <SectionContainer id="home">
         <Content>
-            <Logo />
-            <div>
-                <Title id="home">{name}</Title>
-                <p>{title}</p>
-            </div>
-            <Social />
+            <Animate type="slideIn">
+                <Logo />
+                <div>
+                    <Title>{name}</Title>
+                    <p>{title}</p>
+                </div>
+                <Social />
+            </Animate>
         </Content>
     </SectionContainer>
 );

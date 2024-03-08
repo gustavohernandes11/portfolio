@@ -7,7 +7,7 @@ import { AboutMe } from "../src/sections/AboutMe";
 import { Projects } from "../src/sections/Projects";
 import { Contact } from "../src/sections/Contact";
 import { Main } from "components/Main";
-import { GoDown } from "components/GoDown";
+import { FixedArrow } from "components/FixedArrow";
 
 const Home: NextPage = ({
     data: { name, about, title, projects, meta },
@@ -15,7 +15,7 @@ const Home: NextPage = ({
     return (
         <Main>
             <Seo meta={meta} />
-            <GoDown />
+            <FixedArrow />
             <Intro name={name} title={title} />
             <AboutMe content={about} />
             <Projects projects={projects} />

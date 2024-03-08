@@ -1,26 +1,25 @@
 import styled from "styled-components";
-import { Logo } from "./Logo";
 import { Nav } from "./Nav";
+import Animate from "components/Animate";
 
 export const Header: React.FC = () => (
-    <StyledHeader>
-        <Logo />
-        <Nav />
-    </StyledHeader>
+    <Animate type="zoomIn">
+        <StyledHeader>
+            <Nav />
+        </StyledHeader>
+    </Animate>
 );
 
 export const StyledHeader = styled.header`
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: white;
-    padding: 1rem 5rem;
-    z-index: 999;
+    border-radius: 100rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 
     @media (max-width: 768px) {
         padding: 1rem;

@@ -3,13 +3,19 @@ import styled, { CSSProperties } from "styled-components";
 interface SectionContainerProps {
     children: React.ReactNode;
     direction?: CSSProperties["flexDirection"];
+    id?: string;
 }
 
 export const SectionContainer = ({
     children,
     direction,
+    id,
 }: SectionContainerProps) => {
-    return <Container direction={direction}>{children}</Container>;
+    return (
+        <Container direction={direction} id={id}>
+            {children}
+        </Container>
+    );
 };
 
 interface ContainerProps {
