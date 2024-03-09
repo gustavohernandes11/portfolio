@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 body {
   min-height: 100vh;
     ::-webkit-scrollbar {
-    width: 0.5em;
+    width: 1rem;
   }
   ::-webkit-scrollbar-track {
   background-color: #ececec;
