@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import React from "react";
 
 export const Title = ({ children, ...props }: any) => (
     <StyledHeading {...props}>{children}</StyledHeading>
@@ -7,5 +6,6 @@ export const Title = ({ children, ...props }: any) => (
 
 const StyledHeading = styled.h2`
     text-align: center;
+    font-size: 3rem;
     margin: 2rem 0;
 `;
