@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 
 type AnimateOptions = "slideInLeft" | "zoomIn" | "slideInRight";
@@ -12,7 +12,7 @@ const Animate = ({ children, type }: AnimateProps) => {
     const [inView, setInView] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
