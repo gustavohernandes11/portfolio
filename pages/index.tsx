@@ -1,15 +1,14 @@
 import type { GetStaticProps, NextPage } from "next";
 
-import Animate from "components/Animate";
 import { FixedArrow } from "components/FixedArrow";
 import { Header } from "components/Header";
 import { Main } from "components/Main";
+import { Footer } from "sections/Footer";
 import { Seo } from "../src/components/Seo";
 import { AboutMe } from "../src/sections/AboutMe";
 import { Contact } from "../src/sections/Contact";
 import { Intro } from "../src/sections/Intro";
 import { Projects } from "../src/sections/Projects";
-import { Footer } from "sections/Footer";
 
 const Home: NextPage = ({
     data: { name, about, title, projects, meta },
@@ -17,9 +16,7 @@ const Home: NextPage = ({
     return (
         <Main>
             <Seo meta={meta} />
-            <Animate type="zoomIn">
-                <Header />
-            </Animate>
+            <Header />
             <FixedArrow />
             <Intro name={name} title={title} />
             <AboutMe content={about} />

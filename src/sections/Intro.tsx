@@ -12,7 +12,7 @@ type IntroType = {
 export const Intro = ({ name, title }: IntroType) => (
     <SectionContainer dottedBackground id="home">
         <Content>
-            <Animate type="slideIn">
+            <Animate type="slideInLeft">
                 <Logo />
                 <div>
                     <Title>{name}</Title>

@@ -1,13 +1,16 @@
 import { ContactForm } from "components/ContactForm";
 import { SectionContainer } from "components/SectionContainer";
 import { Title } from "components/Title";
+import { WrapBetweenArrows } from "components/WrapBetweenArrows";
 import styled from "styled-components";
 
 export const Contact = () => (
-    <SectionContainer>
+    <SectionContainer center>
         <Title id="contact">CONTATO</Title>
         <SmallContainer>
-            <ContactForm />
+            <WrapBetweenArrows>
+                <ContactForm />
+            </WrapBetweenArrows>
         </SmallContainer>
     </SectionContainer>
 );

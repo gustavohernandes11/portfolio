@@ -3,27 +3,31 @@ import { Nav } from "./Nav";
 import Animate from "components/Animate";
 
 export const Header: React.FC = () => (
-    <Animate type="zoomIn">
-        <StyledHeader>
-            <Nav />
-        </StyledHeader>
-    </Animate>
+    <StyledFixed>
+        <Animate type="zoomIn">
+            <StyledHeader>
+                <Nav />
+            </StyledHeader>
+        </Animate>
+    </StyledFixed>
 );
 
 export const StyledHeader = styled.header`
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: white;
     border-radius: 100rem;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 10;
 
     @media (max-width: 768px) {
         padding: 1rem;
         background-color: transparent;
         border: none;
     }
+`;
+export const StyledFixed = styled.div`
+    position: fixed;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 `;

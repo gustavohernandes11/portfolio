@@ -1,22 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import styled, { css } from "styled-components";
+
+type AnimateOptions = "slideInLeft" | "zoomIn" | "slideInRight";
 
 interface AnimateProps {
     children: React.ReactNode;
-    type: "slideIn" | "zoomIn";
+    type: AnimateOptions;
 }
 
 const Animate = ({ children, type }: AnimateProps) => {
     const [inView, setInView] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setInView(entry.isIntersecting);
-                    }
+                    setInView(entry.isIntersecting);
                 });
             },
             { threshold: 0.5 }
@@ -33,29 +33,55 @@ const Animate = ({ children, type }: AnimateProps) => {
         };
     }, []);
 
-    return (
-        <StyledAnimate ref={ref} inView={inView} type={type}>
-            {children}
-        </StyledAnimate>
-    );
+    const animationProps = {
+        ref,
+        inView,
+        type,
+    };
+
+    {
+        if (type === "slideInLeft")
+            return (
+                <StyledSlideInLeft {...animationProps}>
+                    {children}
+                </StyledSlideInLeft>
+            );
+        else if (type === "slideInRight")
+            return (
+                <StyledSlideInRight {...animationProps}>
+                    {children}
+                </StyledSlideInRight>
+            );
+        else {
+            return <StyledZoomIn {...animationProps}>{children}</StyledZoomIn>;
+        }
+    }
 };
 
-const StyledAnimate = styled.div<{ inView: boolean; type: string }>`
-    ${({ inView, type }) => css`
+const StyledSlideInLeft = styled.div<{ inView: boolean; type: AnimateOptions }>`
+    ${({ inView }) => css`
         display: unset;
-        transition: all 750ms;
-        opacity: ${inView ? "100%" : "0"};
-        transform: ${inView
-            ? type === "slideIn"
-                ? "translateX(0)"
-                : type === "zoomIn"
-                ? "scale(1)"
-                : ""
-            : type === "slideIn"
-            ? "translateX(-20%)"
-            : type === "zoomIn"
-            ? "scale(0)"
-            : ""};
+        transition: all 750ms ease-in-out;
+        opacity: ${inView ? "1" : "0"};
+        transform: ${inView ? "translateX(0)" : "translateX(20%)"};
+    `}
+`;
+const StyledSlideInRight = styled.div<{
+    inView: boolean;
+    type: AnimateOptions;
+}>`
+    ${({ inView }) => css`
+        display: unset;
+        transition: all 750ms ease-in-out;
+        opacity: ${inView ? "1" : "0"};
+        transform: ${inView ? "translateX(0)" : "translateX(-20%)"};
+    `}
+`;
+
+const StyledZoomIn = styled.div<{ inView: boolean; type: AnimateOptions }>`
+    ${({ inView }) => css`
+        transition: all 750ms ease-in-out;
+        transform: ${inView ? "scale(1)" : "scale(0)"};
     `}
 `;
 

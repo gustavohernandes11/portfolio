@@ -39,7 +39,7 @@ export const ContactForm = () => {
                     type="text"
                     minLength={3}
                     maxLength={300}
-                    placeholder="Nome"
+                    placeholder="Fulano de tal"
                     name="name-input"
                     id="name-input"
                 />

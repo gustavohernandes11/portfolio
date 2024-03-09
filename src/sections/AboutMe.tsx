@@ -1,6 +1,7 @@
 import Animate from "components/Animate";
 import { SectionContainer } from "components/SectionContainer";
 import { Title } from "components/Title";
+import { WrapBetweenArrows } from "components/WrapBetweenArrows";
 import styled from "styled-components";
 import serialize from "utils/serialize";
 
@@ -10,12 +11,14 @@ type AboutMeType = {
 
 export const AboutMe = ({ content }: AboutMeType) => (
     <SectionContainer center>
-        <Animate type="slideIn">
+        <Animate type="slideInLeft">
             <Title id="about">SOBRE</Title>
         </Animate>
-        <Animate type="slideIn">
-            <StyledTextContainer>{serialize(content)}</StyledTextContainer>
-        </Animate>
+        <WrapBetweenArrows>
+            <Animate type="slideInLeft">
+                <StyledTextContainer>{serialize(content)}</StyledTextContainer>
+            </Animate>
+        </WrapBetweenArrows>
     </SectionContainer>
 );
 
