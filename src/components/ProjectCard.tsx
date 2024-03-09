@@ -53,22 +53,25 @@ export const Footer = ({ githubUrl, deployUrl, tags }: FooterType) => {
     return (
         <FooterContainer>
             <TagsContainer>
-                {tags?.map((tag) => (
-                    <Chip key={tag.name} text={tag.name} />
-                ))}
+                {tags &&
+                    tags?.map((tag) => <Chip key={tag.name} text={tag.name} />)}
             </TagsContainer>
             <HStack>
-                <StyledGithubButton target="_blank" href={githubUrl}>
-                    <Github color="white" size="25" />
-                </StyledGithubButton>
-                <Button
-                    target="_blank"
-                    href={deployUrl}
-                    as="a"
-                    variant="purple-rounded"
-                >
-                    Ver online →
-                </Button>
+                {githubUrl && (
+                    <StyledGithubButton target="_blank" href={githubUrl}>
+                        <Github color="white" size="25" />
+                    </StyledGithubButton>
+                )}
+                {deployUrl && (
+                    <Button
+                        target="_blank"
+                        href={deployUrl}
+                        as="a"
+                        variant="purple-rounded"
+                    >
+                        Ver online →
+                    </Button>
+                )}
             </HStack>
         </FooterContainer>
     );
@@ -108,6 +111,7 @@ const FooterContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     padding: 2rem;
+    gap: 2rem;
     background: rgba(0, 0, 0, 1);
 `;
 

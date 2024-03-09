@@ -50,7 +50,7 @@ export const FixedArrow = () => {
     );
 };
 
-const pulseAnimation = keyframes`
+export const pulseAnimation = keyframes`
     5% {
         transform: scale(1);
     }

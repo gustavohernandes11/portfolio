@@ -14,6 +14,7 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-radius: 2rem;
     padding: 5rem;
     min-height: 50vh;
     background-color: black;
