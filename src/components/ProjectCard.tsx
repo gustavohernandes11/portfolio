@@ -1,5 +1,6 @@
 import { Github } from "@styled-icons/simple-icons";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { ProjectType } from "../../types/ProjectType";
 import { TagType } from "../../types/TagType";
@@ -14,8 +15,32 @@ export const ProjectCard = ({
     image,
     tags,
 }: ProjectType) => {
+    const [inView, setInView] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setInView(entry.isIntersecting);
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
     return (
-        <Container>
+        <Container ref={ref} inView={inView}>
             <Header title={title} description={description} />
             <Image
                 src={image.url}
@@ -77,29 +102,32 @@ export const Footer = ({ githubUrl, deployUrl, tags }: FooterType) => {
     );
 };
 
-const Container = styled.div`
-    max-width: 50%;
-    display: grid;
-    border-radius: 32px;
+const Container = styled.div<{ inView: boolean }>`
+    max-width: 75vw;
     background-color: #ffffff37;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.58);
-    overflow: hidden;
-
+    transform: ${({ inView }) => (inView ? "scale(1)" : "scale(0.75)")};
+    transition: all 750ms ease-in-out;
     img {
         object-fit: contain;
-        max-height: 60vh;
         height: auto;
+        max-height: 500px;
         width: 100%;
         padding: 1rem;
+    }
+    :hover {
+        cursor: grab;
+    }
+    :active {
+        cursor: grabbing;
     }
 
     @media (max-width: 768px) {
         gap: 0rem;
         margin-inline: 0rem;
-        grid-template-columns: 1fr;
         padding-block: 2.5rem;
     }
 `;
@@ -110,7 +138,7 @@ const FooterContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     gap: 2rem;
     background: rgba(0, 0, 0, 1);
 `;
@@ -120,7 +148,7 @@ const HeaderContainer = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     background: rgba(0, 0, 0, 1);
 `;
 

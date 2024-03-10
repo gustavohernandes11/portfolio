@@ -17,6 +17,6 @@ const Container = styled.div`
 const StyledText = styled.div`
     font-size: 1rem;
     margin: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.5rem;
     color: #000000;
 `;
