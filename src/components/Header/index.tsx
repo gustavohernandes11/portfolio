@@ -1,12 +1,15 @@
-import styled from "styled-components";
-import { Nav } from "./Nav";
 import Animate from "components/Animate";
+import styled from "styled-components";
+import { NavLink } from "./NavLink";
 
 export const Header: React.FC = () => (
     <StyledFixed>
         <Animate type="zoomIn">
             <StyledHeader>
-                <Nav />
+                <NavLink href="#home">INÍCIO</NavLink>
+                <NavLink href="#about">SOBRE</NavLink>
+                <NavLink href="#projects">PROJETOS</NavLink>
+                <NavLink href="#contact">CONTATO</NavLink>
             </StyledHeader>
         </Animate>
     </StyledFixed>
@@ -17,12 +20,6 @@ export const StyledHeader = styled.header`
     border-radius: 100rem;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    @media (max-width: 768px) {
-        padding: 1rem;
-        background-color: transparent;
-        border: none;
-    }
 `;
 export const StyledFixed = styled.div`
     position: fixed;
