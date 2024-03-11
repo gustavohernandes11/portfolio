@@ -28,7 +28,7 @@ export const Projects = ({ projects }: ProjectsType) => {
     const isMobile = useMediaQuery(768);
 
     const getSlidesPerView = () => {
-        if (isMobile) return 1.2;
+        if (isMobile) return 1;
         else if (isTablet) return 1.5;
         else return 2;
     };

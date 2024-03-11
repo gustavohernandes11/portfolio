@@ -105,13 +105,11 @@ export const Footer = ({ githubUrl, deployUrl, tags }: FooterType) => {
 
 const Container = styled.div<{ inView: boolean }>`
     max-width: 75vw;
-    background-color: #ffffff37;
+    background-color: white;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.58);
     transform: ${({ inView }) => (inView ? "scale(1)" : "scale(0.75)")};
-    transition: all 750ms ease-in-out;
+    transition: transform 250ms ease-in-out;
     border-radius: 1rem;
     overflow: hidden;
 

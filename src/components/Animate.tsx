@@ -16,7 +16,9 @@ const Animate = ({ children, type }: AnimateProps) => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    setInView(entry.isIntersecting);
+                    if (entry.isIntersecting) {
+                        setInView(true);
+                    }
                 });
             },
             { threshold: 0.5 }
