@@ -9,8 +9,6 @@ export const customRender = (ui) => {
         </GlobalContextProvider>
     );
 };
-// re-export everything
 export * from "@testing-library/react";
 
-// override render method
 export { customRender as render };

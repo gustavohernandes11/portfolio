@@ -7,10 +7,9 @@ const nextConfig = {
     },
     trailingSlash: true,
     images: {
-        domains: ["github.com"],
-
+        domains: ["github.com", "images.unsplash.com"],
+        unoptimized: true,
     },
-
 };
 
 module.exports = nextConfig;

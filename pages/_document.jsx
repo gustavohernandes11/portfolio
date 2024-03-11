@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
                     />
                 </Head>
                 <body>
-                    <title>Gustavo Hernandes | Dev</title>
+                    <title>Gustavo Hernandes</title>
                     <Main />
                     <NextScript />
                 </body>
