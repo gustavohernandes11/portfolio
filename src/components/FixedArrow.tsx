@@ -104,5 +104,6 @@ export const StyledFixedArrow = styled.button`
     @media (max-width: 768px) {
         bottom: 1rem;
         right: 1rem;
+        scale: 0.6;
     }
 `;

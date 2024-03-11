@@ -78,6 +78,7 @@ const StyledContactForm = styled.form`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+    font-size: 1rem;
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -110,6 +111,7 @@ const Input = styled.input`
     background-color: white;
     border: 1px solid #e4e4e4;
     width: 100%;
+    min-width: 16rem;
 `;
 
 const Textarea = styled.textarea`
@@ -118,7 +120,7 @@ const Textarea = styled.textarea`
     background-color: white;
     border: 1px solid #e4e4e4;
     width: 100%;
-
+    min-width: 16rem;
     resize: vertical;
     min-height: 4rem;
     max-height: 14rem;
