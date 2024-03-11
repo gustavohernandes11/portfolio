@@ -43,6 +43,7 @@ export const ProjectCard = ({
         <Container ref={ref} inView={inView}>
             <Header title={title} description={description} />
             <Image
+                className="projectCover"
                 src={image.url}
                 alt={image.alt}
                 width={image.width}
@@ -111,13 +112,17 @@ const Container = styled.div<{ inView: boolean }>`
     border: 1px solid rgba(255, 255, 255, 0.58);
     transform: ${({ inView }) => (inView ? "scale(1)" : "scale(0.75)")};
     transition: all 750ms ease-in-out;
-    img {
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .projectCover {
         object-fit: contain;
         height: auto;
         max-height: 500px;
         width: 100%;
         padding: 1rem;
     }
+
     :hover {
         cursor: grab;
     }
@@ -128,7 +133,11 @@ const Container = styled.div<{ inView: boolean }>`
     @media (max-width: 768px) {
         gap: 0rem;
         margin-inline: 0rem;
-        padding-block: 2.5rem;
+        max-width: 100vw;
+
+        .projectCover {
+            max-height: 400px;
+        }
     }
 `;
 
@@ -141,6 +150,12 @@ const FooterContainer = styled.div`
     padding: 1rem;
     gap: 2rem;
     background: rgba(0, 0, 0, 1);
+
+    @media (max-width: 768px) {
+        gap: 1rem;
+        flex-wrap: wrap-reverse;
+        justify-content: end;
+    }
 `;
 
 const HeaderContainer = styled.div`
@@ -156,6 +171,10 @@ const ProjectTitle = styled.h3`
     font-size: 2.5rem;
     color: white;
     margin: 0;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const ProjectDescription = styled.p`
@@ -175,7 +194,7 @@ const StyledGithubButton = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.5rem;
 `;
 
 const HStack = styled.span`

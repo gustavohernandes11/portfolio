@@ -100,4 +100,9 @@ export const StyledFixedArrow = styled.button`
         cursor: pointer;
         animation: ${pulseAnimation} 2s infinite;
     }
+
+    @media (max-width: 768px) {
+        bottom: 1rem;
+        right: 1rem;
+    }
 `;

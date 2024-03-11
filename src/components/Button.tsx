@@ -31,7 +31,7 @@ const StyledButton = styled("button")<{
         align-items: center;
         justify-content: center;
         font-size: 1rem;
-        padding: 1rem 1.5rem;
+        padding: 0.5rem 1.25rem;
         border: none;
         border-radius: 0.25rem;
         text-decoration: none;
@@ -47,7 +47,6 @@ const StyledButton = styled("button")<{
         `}
         ${variant == "purple-rounded" &&
         css`
-            font-size: 1.25rem;
             border-radius: 32rem;
             background-color: purple;
             color: white;

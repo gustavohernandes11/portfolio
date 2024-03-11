@@ -60,10 +60,14 @@ const Animate = ({ children, type }: AnimateProps) => {
 
 const StyledSlideInLeft = styled.div<{ inView: boolean; type: AnimateOptions }>`
     ${({ inView }) => css`
-        display: unset;
         transition: all 750ms ease-in-out;
         opacity: ${inView ? "1" : "0"};
-        transform: ${inView ? "translateX(0)" : "translateX(20%)"};
+        transform: ${inView ? "translateX(0)" : "translateX(5%)"};
+
+        @media (prefers-reduced-motion) {
+            transform: translateX(0);
+            opacity: 1;
+        }
     `}
 `;
 const StyledSlideInRight = styled.div<{
@@ -71,10 +75,14 @@ const StyledSlideInRight = styled.div<{
     type: AnimateOptions;
 }>`
     ${({ inView }) => css`
-        display: unset;
         transition: all 750ms ease-in-out;
         opacity: ${inView ? "1" : "0"};
-        transform: ${inView ? "translateX(0)" : "translateX(-20%)"};
+        transform: ${inView ? "translateX(0)" : "translateX(-5%)"};
+
+        @media (prefers-reduced-motion) {
+            transform: translateX(0);
+            opacity: 1;
+        }
     `}
 `;
 
@@ -82,6 +90,11 @@ const StyledZoomIn = styled.div<{ inView: boolean; type: AnimateOptions }>`
     ${({ inView }) => css`
         transition: all 750ms ease-in-out;
         transform: ${inView ? "scale(1)" : "scale(0)"};
+
+        @media (prefers-reduced-motion) {
+            transform: scale(1);
+            opacity: 1;
+        }
     `}
 `;
 

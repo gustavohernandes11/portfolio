@@ -5,7 +5,14 @@ export const Title = ({ children, ...props }: any) => (
 );
 
 const StyledHeading = styled.h2`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 3rem;
     margin: 2rem 0;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
 `;

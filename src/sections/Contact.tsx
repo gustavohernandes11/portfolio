@@ -18,7 +18,9 @@ export const Contact = () => (
 const SmallContainer = styled.div`
     max-width: 50rem;
     margin-inline: auto;
+
     @media (max-width: 768px) {
+        margin-inline: 1rem;
         padding-inline: 1rem;
     }
 `;

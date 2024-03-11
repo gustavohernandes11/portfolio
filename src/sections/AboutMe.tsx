@@ -30,5 +30,6 @@ const StyledTextContainer = styled.div`
 
     @media (max-width: 768px) {
         padding-inline: 1rem;
+        font-size: 1rem;
     }
 `;
