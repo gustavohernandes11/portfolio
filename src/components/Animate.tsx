@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useIntersection } from "hooks/useIntersection";
+import React from "react";
 import styled, { css } from "styled-components";
 
 type AnimateOptions = "slideInLeft" | "zoomIn" | "slideInRight";
@@ -9,35 +10,11 @@ interface AnimateProps {
 }
 
 const Animate = ({ children, type }: AnimateProps) => {
-    const [inView, setInView] = useState(false);
-    const ref = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setInView(true);
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
-
-        return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
-        };
-    }, []);
+    const { isIntersecting, ref } = useIntersection();
 
     const animationProps = {
         ref,
-        inView,
+        isIntersecting,
         type,
     };
 
@@ -60,11 +37,14 @@ const Animate = ({ children, type }: AnimateProps) => {
     }
 };
 
-const StyledSlideInLeft = styled.div<{ inView: boolean; type: AnimateOptions }>`
-    ${({ inView }) => css`
+const StyledSlideInLeft = styled.div<{
+    isIntersecting: boolean;
+    type: AnimateOptions;
+}>`
+    ${({ isIntersecting }) => css`
         transition: all 750ms ease-in-out;
-        opacity: ${inView ? "1" : "0"};
-        transform: ${inView ? "translateX(0)" : "translateX(5%)"};
+        opacity: ${isIntersecting ? "1" : "0"};
+        transform: ${isIntersecting ? "translateX(0)" : "translateX(5%)"};
 
         @media (prefers-reduced-motion) {
             transform: translateX(0);
@@ -73,13 +53,13 @@ const StyledSlideInLeft = styled.div<{ inView: boolean; type: AnimateOptions }>`
     `}
 `;
 const StyledSlideInRight = styled.div<{
-    inView: boolean;
+    isIntersecting: boolean;
     type: AnimateOptions;
 }>`
-    ${({ inView }) => css`
+    ${({ isIntersecting }) => css`
         transition: all 750ms ease-in-out;
-        opacity: ${inView ? "1" : "0"};
-        transform: ${inView ? "translateX(0)" : "translateX(-5%)"};
+        opacity: ${isIntersecting ? "1" : "0"};
+        transform: ${isIntersecting ? "translateX(0)" : "translateX(-5%)"};
 
         @media (prefers-reduced-motion) {
             transform: translateX(0);
@@ -88,10 +68,13 @@ const StyledSlideInRight = styled.div<{
     `}
 `;
 
-const StyledZoomIn = styled.div<{ inView: boolean; type: AnimateOptions }>`
-    ${({ inView }) => css`
+const StyledZoomIn = styled.div<{
+    isIntersecting: boolean;
+    type: AnimateOptions;
+}>`
+    ${({ isIntersecting }) => css`
         transition: all 750ms ease-in-out;
-        transform: ${inView ? "scale(1)" : "scale(0)"};
+        transform: ${isIntersecting ? "scale(1)" : "scale(0)"};
 
         @media (prefers-reduced-motion) {
             transform: scale(1);

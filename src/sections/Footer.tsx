@@ -1,10 +1,15 @@
+import Animate from "components/Animate";
 import { Social } from "components/Social";
 import styled from "styled-components";
 
 export const Footer = () => (
     <StyledFooter>
-        <Social color="white" />
-        <p>© 2024-present Gustavo Hernandes. All Rights Reserved.</p>
+        <Animate type="slideInLeft">
+            <Social color="white" />
+        </Animate>
+        <Animate type="slideInLeft">
+            <p>© 2024-present Gustavo Hernandes. All Rights Reserved.</p>
+        </Animate>
     </StyledFooter>
 );
 
