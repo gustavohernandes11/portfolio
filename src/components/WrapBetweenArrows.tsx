@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import GrayArrowSVG from "../assets/GrayArrow.svg";
 import Animate from "../components/Animate";
+import { Mixins } from "styles/Mixins";
 
 interface ComponentType {
     children?: React.ReactNode;
@@ -27,9 +28,7 @@ export const WrapBetweenArrows = ({ children }: ComponentType) => {
 };
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    ${Mixins.flexCenter()}
     gap: 5rem;
     @media (max-width: 768px) {
         gap: 1rem;

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { pulseAnimation } from "./FixedArrow";
+import { Mixins } from "styles/Mixins";
 
 type ButtonType = {
     variant?: "light" | "normal" | "purple-rounded";
@@ -26,16 +27,13 @@ const StyledButton = styled("button")<{
     variant: "light" | "normal" | "purple-rounded";
 }>`
     ${({ variant }) => css`
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem;
+        ${Mixins.flexCenter("row")}
         padding: 0.5rem 1.25rem;
         border: none;
         border-radius: 0.25rem;
         text-decoration: none;
         color: black;
+        font-size: 1rem;
         white-space: nowrap;
 
         ${variant == "light" &&

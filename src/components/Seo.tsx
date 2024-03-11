@@ -12,7 +12,9 @@ type MetaType = {
 export const Seo = ({ meta }: MetaType) => {
     return (
         <Head>
-            <title>{meta.title || "Gustavo Hernandes"}</title>
+            <title>
+                {meta.title || "Gustavo Hernandes da Silva | Portfolio"}
+            </title>
             <meta
                 name="description"
                 content={

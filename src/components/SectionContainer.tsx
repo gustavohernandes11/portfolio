@@ -1,4 +1,5 @@
 import styled, { CSSProperties, css } from "styled-components";
+import { Mixins } from "styles/Mixins";
 
 interface SectionContainerProps {
     children: React.ReactNode;
@@ -29,8 +30,8 @@ export const SectionContainer = ({
 };
 
 const Container = styled.section<SectionContainerProps>`
-    min-height: ${({ minHeight }) => minHeight || "100vh"};
     display: flex;
+    min-height: ${({ minHeight }) => minHeight || "100vh"};
     flex-direction: ${({ direction }) => direction || "column"};
 
     ${({ dottedBackground }) =>
@@ -56,11 +57,5 @@ const Container = styled.section<SectionContainerProps>`
 
             background-attachment: fixed;
         `}
-    ${({ center }) =>
-        center &&
-        css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        `}
+    ${({ center }) => center && Mixins.flexCenter()}
 `;

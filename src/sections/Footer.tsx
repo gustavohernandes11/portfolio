@@ -1,6 +1,7 @@
 import Animate from "components/Animate";
 import { Social } from "components/Social";
 import styled from "styled-components";
+import { Mixins } from "styles/Mixins";
 
 export const Footer = () => (
     <StyledFooter>
@@ -16,16 +17,15 @@ export const Footer = () => (
 const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
-    border-radius: 2rem;
     justify-content: center;
+
+    border-radius: 2rem;
     padding: 5rem;
     min-height: 50vh;
     background-color: black;
     color: #bebebe;
 
     @media (max-width: 768px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        ${Mixins.flexCenter("column")}
     }
 `;

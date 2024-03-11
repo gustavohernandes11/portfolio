@@ -83,10 +83,10 @@ export const StyledImage = styled(Image)<{ isAtBottom: boolean }>`
 
 export const StyledFixedArrow = styled.button`
     position: fixed;
-    aspect-ratio: 1/1;
     padding: 1rem;
     bottom: 10rem;
     right: 10rem;
+    aspect-ratio: 1/1;
     background-color: transparent;
     border: none;
     z-index: 100;

@@ -11,7 +11,7 @@ export const Chip = ({ text }: ChipType) => (
 
 const Container = styled.div`
     border-radius: 5rem;
-    background-color: #ddddddc3;
+    background-color: #ecececc3;
     margin: 0;
 `;
 const StyledText = styled.div`
