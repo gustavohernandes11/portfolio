@@ -1,7 +1,8 @@
 import { Github } from "@styled-icons/simple-icons";
+import { useIntersection } from "hooks/useIntersection";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import { Mixins } from "styles/Mixins";
 import { ProjectType } from "../../types/ProjectType";
 import { TagType } from "../../types/TagType";
 import { Button } from "./Button";
@@ -15,32 +16,10 @@ export const ProjectCard = ({
     image,
     tags,
 }: ProjectType) => {
-    const [inView, setInView] = useState(false);
-    const ref = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    setInView(entry.isIntersecting);
-                });
-            },
-            { threshold: 0.5 }
-        );
-
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
-
-        return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
-        };
-    }, []);
+    const { isIntersecting, ref } = useIntersection({ recurrence: "always" });
 
     return (
-        <Container ref={ref} inView={inView}>
+        <Container ref={ref} inView={isIntersecting}>
             <Header title={title} description={description} />
             <Image
                 className="projectCover"
@@ -190,9 +169,7 @@ const TagsContainer = styled.span`
 `;
 
 const StyledGithubButton = styled.a`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${Mixins.flexCenter()}
     padding: 0.5rem;
 `;
 

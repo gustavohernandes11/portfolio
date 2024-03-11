@@ -1,6 +1,6 @@
 import { Github, Leetcode, Linkedin } from "@styled-icons/simple-icons";
-import { IconButton } from "./IconButton";
 import { useMediaQuery } from "hooks/useMediaQuery";
+import { IconButton } from "./IconButton";
 
 type SocialIconProps = {
     icon: any;

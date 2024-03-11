@@ -1,4 +1,4 @@
-import { useIntersection } from "hooks/useIntersection";
+import { RecurrenceOptions, useIntersection } from "hooks/useIntersection";
 import React from "react";
 import styled, { css } from "styled-components";
 
@@ -7,10 +7,11 @@ type AnimateOptions = "slideInLeft" | "zoomIn" | "slideInRight";
 interface AnimateProps {
     children: React.ReactNode;
     type: AnimateOptions;
+    recurrence?: RecurrenceOptions;
 }
 
-const Animate = ({ children, type }: AnimateProps) => {
-    const { isIntersecting, ref } = useIntersection();
+const Animate = ({ children, type, recurrence = "always" }: AnimateProps) => {
+    const { isIntersecting, ref } = useIntersection({ recurrence });
 
     const animationProps = {
         ref,

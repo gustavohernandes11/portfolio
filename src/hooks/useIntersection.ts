@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useIntersection = () => {
+export type RecurrenceOptions = "once" | "always";
+
+type UseIntersectionOptions = {
+    recurrence: RecurrenceOptions;
+};
+
+export const useIntersection = ({
+    recurrence = "always",
+}: UseIntersectionOptions) => {
     const [isIntersecting, setIsIntersecting] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
@@ -8,8 +16,12 @@ export const useIntersection = () => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setIsIntersecting(true);
+                    if (recurrence === "once") {
+                        if (entry.isIntersecting) {
+                            setIsIntersecting(true);
+                        }
+                    } else {
+                        setIsIntersecting(entry.isIntersecting);
                     }
                 });
             },
