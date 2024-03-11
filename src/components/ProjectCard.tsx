@@ -132,6 +132,7 @@ const Container = styled.div<{ inView: boolean }>`
         gap: 0rem;
         margin-inline: 0rem;
         max-width: 100vw;
+        transform: ${({ inView }) => (inView ? "scale(1)" : "scale(0.90)")};
 
         .projectCover {
             max-height: 400px;
