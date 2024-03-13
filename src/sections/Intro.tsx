@@ -13,16 +13,16 @@ export const Intro = ({ name, title }: IntroType) => (
     <SectionContainer dottedBackground id="home">
         <Content>
             <Animate type="slideLeft">
-                <HStack>
+                <Span>
                     <Logo />
-                </HStack>
-                <HStack>
+                </Span>
+                <Span>
                     <MainHeading>{name}</MainHeading>
                     <p>{title}</p>
-                </HStack>
-                <HStack>
+                </Span>
+                <Span>
                     <Social />
-                </HStack>
+                </Span>
             </Animate>
         </Content>
     </SectionContainer>
@@ -52,7 +52,7 @@ const Content = styled.div`
     }
 `;
 
-const HStack = styled.div`
+const Span = styled.div`
     margin-bottom: 1rem;
 
     @media (max-width: 768px) {

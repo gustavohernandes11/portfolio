@@ -13,17 +13,17 @@ type SocialProps = {
 
 export const Social = ({ color = "black" }: SocialProps) => (
     <span>
-        <SocialIconButton
+        <SocialButton
             icon={Github}
             color={color}
             href="https://github.com/gustavohernandes11"
         />
-        <SocialIconButton
+        <SocialButton
             icon={Linkedin}
             color={color}
             href="https://www.linkedin.com/in/gustavo-hernandes11/"
         />
-        <SocialIconButton
+        <SocialButton
             icon={Leetcode}
             color={color}
             href="https://leetcode.com/hernandes11/"
@@ -31,7 +31,7 @@ export const Social = ({ color = "black" }: SocialProps) => (
     </span>
 );
 
-const SocialIconButton = ({ icon, href, color }: SocialIconProps) => {
+const SocialButton = ({ icon, href, color }: SocialIconProps) => {
     const isTablet = useMediaQuery(1024);
 
     return (
