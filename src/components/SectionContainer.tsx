@@ -1,10 +1,8 @@
-import styled, { CSSProperties, css } from "styled-components";
+import styled, { css } from "styled-components";
 import { Mixins } from "styles/Mixins";
 
 interface SectionContainerProps {
     children: React.ReactNode;
-    direction?: CSSProperties["flexDirection"];
-    minHeight?: React.CSSProperties["minHeight"];
     dottedBackground?: boolean;
     center?: boolean;
     id?: string;
@@ -12,18 +10,12 @@ interface SectionContainerProps {
 
 export const SectionContainer = ({
     children,
-    direction,
     dottedBackground = false,
     id,
     center,
 }: SectionContainerProps) => {
     return (
-        <Container
-            dottedBackground={dottedBackground}
-            center={center}
-            direction={direction}
-            id={id}
-        >
+        <Container dottedBackground={dottedBackground} center={center} id={id}>
             {children}
         </Container>
     );
@@ -31,8 +23,8 @@ export const SectionContainer = ({
 
 const Container = styled.section<SectionContainerProps>`
     display: flex;
-    min-height: ${({ minHeight }) => minHeight || "100vh"};
-    flex-direction: ${({ direction }) => direction || "column"};
+    min-height: 100vh;
+    flex-direction: column;
 
     ${({ dottedBackground }) =>
         dottedBackground &&
