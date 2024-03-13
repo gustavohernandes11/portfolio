@@ -1,4 +1,4 @@
-import Animate from "components/Animate";
+import { Animate } from "components/Animate";
 import { SectionContainer } from "components/SectionContainer";
 import { Title } from "components/Title";
 import { WrapBetweenArrows } from "components/WrapBetweenArrows";
@@ -11,11 +11,11 @@ type AboutMeType = {
 
 export const AboutMe = ({ content }: AboutMeType) => (
     <SectionContainer center id="about">
-        <Animate type="slideInLeft">
+        <Animate type="slideLeft">
             <Title>SOBRE</Title>
         </Animate>
         <WrapBetweenArrows>
-            <Animate type="slideInLeft">
+            <Animate type="slideLeft">
                 <StyledTextContainer>
                     {content &&
                         !Array.isArray(content) &&

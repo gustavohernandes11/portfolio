@@ -1,14 +1,14 @@
-import Animate from "components/Animate";
+import { Animate } from "components/Animate";
 import { Social } from "components/Social";
 import styled from "styled-components";
 import { Mixins } from "styles/Mixins";
 
 export const Footer = () => (
     <StyledFooter>
-        <Animate type="slideInLeft">
+        <Animate type="slideLeft">
             <Social color="white" />
         </Animate>
-        <Animate type="slideInLeft">
+        <Animate type="slideLeft">
             <p>© 2024-present Gustavo Hernandes. All Rights Reserved.</p>
         </Animate>
     </StyledFooter>

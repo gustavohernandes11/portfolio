@@ -2,7 +2,7 @@ import { RecurrenceOptions, useIntersection } from "hooks/useIntersection";
 import React from "react";
 import styled, { css } from "styled-components";
 
-type AnimateOptions = "slideInLeft" | "zoomIn" | "slideInRight";
+type AnimateOptions = "slideLeft" | "zoomIn" | "slideRight";
 
 interface AnimateProps {
     children: React.ReactNode;
@@ -10,27 +10,30 @@ interface AnimateProps {
     recurrence?: RecurrenceOptions;
 }
 
-const Animate = ({ children, type, recurrence = "always" }: AnimateProps) => {
+export const Animate = ({
+    children,
+    type,
+    recurrence = "always",
+}: AnimateProps) => {
     const { isIntersecting, ref } = useIntersection({ recurrence });
 
     const animationProps = {
         ref,
         isIntersecting,
-        type,
     };
 
     {
-        if (type === "slideInLeft")
+        if (type === "slideLeft")
             return (
-                <StyledSlideInLeft {...animationProps}>
+                <StyledslideLeft {...animationProps}>
                     {children}
-                </StyledSlideInLeft>
+                </StyledslideLeft>
             );
-        else if (type === "slideInRight")
+        else if (type === "slideRight")
             return (
-                <StyledSlideInRight {...animationProps}>
+                <StyledslideRight {...animationProps}>
                     {children}
-                </StyledSlideInRight>
+                </StyledslideRight>
             );
         else {
             return <StyledZoomIn {...animationProps}>{children}</StyledZoomIn>;
@@ -38,50 +41,39 @@ const Animate = ({ children, type, recurrence = "always" }: AnimateProps) => {
     }
 };
 
-const StyledSlideInLeft = styled.div<{
+const AnimationContainer = styled.div`
+    transition: all 750ms ease-in-out;
+
+    @media (prefers-reduced-motion) {
+        transform: scale(1);
+        opacity: 1;
+    }
+`;
+
+const StyledslideLeft = styled(AnimationContainer)<{
     isIntersecting: boolean;
-    type: AnimateOptions;
 }>`
     ${({ isIntersecting }) => css`
-        transition: all 750ms ease-in-out;
         opacity: ${isIntersecting ? "1" : "0"};
         transform: ${isIntersecting ? "translateX(0)" : "translateX(5%)"};
-
-        @media (prefers-reduced-motion) {
-            transform: translateX(0);
-            opacity: 1;
-        }
     `}
 `;
-const StyledSlideInRight = styled.div<{
+
+const StyledslideRight = styled(AnimationContainer)<{
     isIntersecting: boolean;
-    type: AnimateOptions;
 }>`
     ${({ isIntersecting }) => css`
         transition: all 750ms ease-in-out;
         opacity: ${isIntersecting ? "1" : "0"};
         transform: ${isIntersecting ? "translateX(0)" : "translateX(-5%)"};
-
-        @media (prefers-reduced-motion) {
-            transform: translateX(0);
-            opacity: 1;
-        }
     `}
 `;
 
-const StyledZoomIn = styled.div<{
+const StyledZoomIn = styled(AnimationContainer)<{
     isIntersecting: boolean;
-    type: AnimateOptions;
 }>`
     ${({ isIntersecting }) => css`
         transition: all 750ms ease-in-out;
         transform: ${isIntersecting ? "scale(1)" : "scale(0)"};
-
-        @media (prefers-reduced-motion) {
-            transform: scale(1);
-            opacity: 1;
-        }
     `}
 `;
-
-export default Animate;

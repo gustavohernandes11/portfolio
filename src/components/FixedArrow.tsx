@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 import ArrowSVG from "../assets/Arrow.svg";
-import Animate from "./Animate";
+import { Animate } from "./Animate";
 
 const scrollDownByOneVh = () => {
     window.scrollBy({

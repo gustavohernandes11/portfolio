@@ -18,8 +18,8 @@ type ProjectsType = {
 
 export const Projects = ({ projects }: ProjectsType) => {
     return (
-        <SectionContainer dottedBackground>
-            <Title id="projects">PROJETOS</Title>
+        <SectionContainer id="projects" dottedBackground>
+            <Title>PROJETOS</Title>
             <Carousel projects={projects} />
         </SectionContainer>
     );

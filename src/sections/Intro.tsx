@@ -1,4 +1,4 @@
-import Animate from "components/Animate";
+import { Animate } from "components/Animate";
 import { Logo } from "components/Logo";
 import { SectionContainer } from "components/SectionContainer";
 import { Social } from "components/Social";
@@ -12,7 +12,7 @@ type IntroType = {
 export const Intro = ({ name, title }: IntroType) => (
     <SectionContainer dottedBackground id="home">
         <Content>
-            <Animate type="slideInLeft">
+            <Animate type="slideLeft">
                 <HStack>
                     <Logo />
                 </HStack>

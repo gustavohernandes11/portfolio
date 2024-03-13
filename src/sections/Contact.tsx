@@ -5,8 +5,8 @@ import { WrapBetweenArrows } from "components/WrapBetweenArrows";
 import styled from "styled-components";
 
 export const Contact = () => (
-    <SectionContainer center>
-        <Title id="contact">CONTATO</Title>
+    <SectionContainer id="contact" center>
+        <Title>CONTATO</Title>
         <SmallContainer>
             <WrapBetweenArrows>
                 <ContactForm />

@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import GrayArrowSVG from "../assets/GrayArrow.svg";
-import Animate from "../components/Animate";
+import { Animate } from "../components/Animate";
 import { Mixins } from "styles/Mixins";
 
 interface ComponentType {
@@ -12,11 +12,11 @@ interface ComponentType {
 export const WrapBetweenArrows = ({ children }: ComponentType) => {
     return (
         <Wrapper>
-            <Animate type="slideInRight">
+            <Animate type="slideRight">
                 <StyledImage src={GrayArrowSVG} alt="arrow" />
             </Animate>
             {children}
-            <Animate type="slideInLeft">
+            <Animate type="slideLeft">
                 <StyledImage
                     style={{ transform: "Rotate(180deg)" }}
                     src={GrayArrowSVG}

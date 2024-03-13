@@ -1,4 +1,4 @@
-import Animate from "components/Animate";
+import { Animate } from "components/Animate";
 import styled from "styled-components";
 import { NavLink } from "./NavLink";
 
