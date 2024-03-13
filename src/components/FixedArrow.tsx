@@ -20,14 +20,14 @@ const scrollUpToTop = () => {
 };
 
 export const FixedArrow = () => {
-    const [isAtBottom, setIsAtBottom] = useState(false);
+    const [isScrollEnd, setIsScrollEnd] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const isBottom =
                 window.innerHeight + window.scrollY >=
                 document.body.offsetHeight;
-            setIsAtBottom(isBottom);
+            setIsScrollEnd(isBottom);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -38,11 +38,11 @@ export const FixedArrow = () => {
 
     return (
         <StyledFixedArrow
-            onClick={isAtBottom ? scrollUpToTop : scrollDownByOneVh}
+            onClick={isScrollEnd ? scrollUpToTop : scrollDownByOneVh}
         >
             <Animate type="zoomIn">
                 <StyledImage
-                    isAtBottom={isAtBottom}
+                    isScrollEnd={isScrollEnd}
                     src={ArrowSVG}
                     alt="Descer"
                 />
@@ -51,9 +51,9 @@ export const FixedArrow = () => {
     );
 };
 
-export const StyledImage = styled(Image)<{ isAtBottom: boolean }>`
-    ${({ isAtBottom }) =>
-        isAtBottom
+export const StyledImage = styled(Image)<{ isScrollEnd: boolean }>`
+    ${({ isScrollEnd }) =>
+        isScrollEnd
             ? css`
                   transform: rotate(180deg);
                   transition: transform ease-in-out 0.5s;
