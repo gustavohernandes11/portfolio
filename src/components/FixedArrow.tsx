@@ -6,7 +6,7 @@ import { Animate } from "./Animate";
 
 const scrollDownByOneVh = () => {
     window.scrollBy({
-        top: window.innerHeight * 0.8,
+        top: window.innerHeight,
         behavior: "smooth",
     });
 };
