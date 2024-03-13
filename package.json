@@ -15,11 +15,13 @@
     "dependencies": {
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
+        "@payloadcms/richtext-lexical": "^0.7.0",
         "@styled-icons/boxicons-logos": "^10.38.0",
         "@styled-icons/feather": "^10.46.0",
         "@styled-icons/simple-icons": "^10.46.0",
         "escape-html": "^1.0.3",
         "jest-styled-components": "^7.0.8",
+        "lexical": "^0.13.1",
         "next": "^13.0.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",

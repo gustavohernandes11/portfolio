@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Mixins } from "styles/Mixins";
 import { WrapperType } from "../../types/WrapperType";
 
-export const Title = ({ children, ...props }: WrapperType) => (
+export const Title = ({ children, as, ...props }: WrapperType) => (
     <StyledHeading {...props}>{children}</StyledHeading>
 );
 

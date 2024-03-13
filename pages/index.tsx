@@ -15,7 +15,7 @@ import { ProjectType } from "../types/ProjectType";
 type HomeProps = {
     data: {
         name: string;
-        about: string;
+        about: any;
         title: string;
         projects: ProjectType[];
         meta: MetaType;
