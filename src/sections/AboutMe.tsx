@@ -10,9 +10,9 @@ type AboutMeType = {
 };
 
 export const AboutMe = ({ content }: AboutMeType) => (
-    <SectionContainer center>
+    <SectionContainer center id="about">
         <Animate type="slideInLeft">
-            <Title id="about">SOBRE</Title>
+            <Title>SOBRE</Title>
         </Animate>
         <WrapBetweenArrows>
             <Animate type="slideInLeft">

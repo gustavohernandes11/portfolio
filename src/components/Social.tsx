@@ -3,7 +3,7 @@ import { useMediaQuery } from "hooks/useMediaQuery";
 import { IconButton } from "./IconButton";
 
 type SocialIconProps = {
-    icon: any;
+    icon: string | React.FunctionComponent<{}> | React.ComponentClass<{}, any>;
     href: string;
 } & SocialProps;
 

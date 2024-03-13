@@ -9,10 +9,22 @@ import { Seo } from "../src/components/Seo";
 import { Contact } from "../src/sections/Contact";
 import { Intro } from "../src/sections/Intro";
 import { Projects } from "../src/sections/Projects";
+import { MetaType } from "../types/MetaType";
+import { ProjectType } from "../types/ProjectType";
 
-const Home: NextPage = ({
+type HomeProps = {
+    data: {
+        name: string;
+        about: string;
+        title: string;
+        projects: ProjectType[];
+        meta: MetaType;
+    };
+};
+
+const Home: NextPage<HomeProps> = ({
     data: { name, about, title, projects, meta },
-}: any) => {
+}) => {
     return (
         <Main>
             <Seo meta={meta} />

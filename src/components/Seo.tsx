@@ -1,34 +1,25 @@
 import Head from "next/head";
 import React from "react";
+import { MetaType } from "../../types/MetaType";
 
-type MetaType = {
-    meta: {
-        title?: string;
-        description?: string;
-        keywords?: string;
-    };
+type SeoProps = {
+    meta: MetaType;
+};
+const defaultMeta = {
+    title: "Gustavo Hernandes da Silva | Portfolio",
+    description: "Portfolio de um desenvolvedor de sites e sistemas para web.",
+    keywords:
+        "Portfolio, Javascript, Css, HTML, React, Typescript, Engenharia de Produção, Projetos, Styled-Components, Nodejs, Node, API, Next, Nextjs",
 };
 
-export const Seo = ({ meta }: MetaType) => {
+export const Seo = ({ meta: incomingMeta }: SeoProps) => {
+    const meta = Object.assign(defaultMeta, incomingMeta);
+
     return (
         <Head>
-            <title>
-                {meta.title || "Gustavo Hernandes da Silva | Portfolio"}
-            </title>
-            <meta
-                name="description"
-                content={
-                    meta.description ||
-                    "Portfolio de um desenvolvedor de sites e sistemas para web."
-                }
-            />
-            <meta
-                name="keywords"
-                content={
-                    meta.keywords ||
-                    "Portfolio, Javascript, Css, HTML, React, Typescript, Engenharia de Produção, Projetos, Styled-Components, Nodejs, Node, API, Next, Nextjs"
-                }
-            />
+            <title>{meta.title}</title>
+            <meta name="description" content={meta.description} />
+            <meta name="keywords" content={meta.keywords} />
         </Head>
     );
 };

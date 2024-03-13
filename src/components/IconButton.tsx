@@ -1,9 +1,16 @@
-import React from "react";
+import React, { Attributes } from "react";
 import styled from "styled-components";
 
-export const IconButton = ({ onClick, icon, ...props }: any) => (
+type IconButtonProps = {
+    onClick?: () => any;
+    icon: string | React.FunctionComponent<{}> | React.ComponentClass<{}, any>;
+    color?: string;
+    size: number;
+};
+
+export const IconButton = ({ onClick, icon, ...props }: IconButtonProps) => (
     <StyledButton onClick={onClick}>
-        {React.createElement(icon, { ...props })}
+        {React.createElement(icon, { ...(props as Attributes) })}
     </StyledButton>
 );
 
