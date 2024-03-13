@@ -25,15 +25,15 @@ export const Animate = ({
     {
         if (type === "slideLeft")
             return (
-                <StyledslideLeft {...animationProps}>
+                <StyledSlideLeft {...animationProps}>
                     {children}
-                </StyledslideLeft>
+                </StyledSlideLeft>
             );
         else if (type === "slideRight")
             return (
-                <StyledslideRight {...animationProps}>
+                <StyledSlideRight {...animationProps}>
                     {children}
-                </StyledslideRight>
+                </StyledSlideRight>
             );
         else {
             return <StyledZoomIn {...animationProps}>{children}</StyledZoomIn>;
@@ -50,7 +50,7 @@ const AnimationContainer = styled.div`
     }
 `;
 
-const StyledslideLeft = styled(AnimationContainer)<{
+const StyledSlideLeft = styled(AnimationContainer)<{
     isIntersecting: boolean;
 }>`
     ${({ isIntersecting }) => css`
@@ -59,7 +59,7 @@ const StyledslideLeft = styled(AnimationContainer)<{
     `}
 `;
 
-const StyledslideRight = styled(AnimationContainer)<{
+const StyledSlideRight = styled(AnimationContainer)<{
     isIntersecting: boolean;
 }>`
     ${({ isIntersecting }) => css`

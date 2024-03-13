@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
+import { Animations } from "styles/Animations";
 import ArrowSVG from "../assets/Arrow.svg";
 import { Animate } from "./Animate";
 
@@ -50,24 +51,6 @@ export const FixedArrow = () => {
     );
 };
 
-export const pulseAnimation = keyframes`
-    5% {
-        transform: scale(1);
-    }
-    15% {
-        transform: scale(1.1);
-    }
-    25% {
-        transform: scale(0.9);
-    }
-    35% {
-        transform: scale(1.1);
-    }
-    45% {
-        transform: scale(1);
-    }
-`;
-
 export const StyledImage = styled(Image)<{ isAtBottom: boolean }>`
     ${({ isAtBottom }) =>
         isAtBottom
@@ -98,7 +81,7 @@ export const StyledFixedArrow = styled.button`
 
     :hover {
         cursor: pointer;
-        animation: ${pulseAnimation} 2s infinite;
+        animation: ${Animations.pulse} 2s infinite;
     }
 
     @media (max-width: 768px) {

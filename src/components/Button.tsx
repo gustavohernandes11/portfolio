@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { pulseAnimation } from "./FixedArrow";
+import { Animations } from "styles/Animations";
 import { Mixins } from "styles/Mixins";
 
 type ButtonType = {
@@ -51,7 +51,7 @@ const StyledButton = styled("button")<{
             :hover {
                 background-color: #850e85;
                 cursor: pointer;
-                animation: ${pulseAnimation} 1.5s;
+                animation: ${Animations.pulse} 1.5s;
             }
         `}
         ${variant == "normal" &&

@@ -39,7 +39,7 @@ export const ContactForm = () => {
                     type="text"
                     minLength={3}
                     maxLength={300}
-                    placeholder="Fulano de tal"
+                    placeholder="Fi do seu Zé"
                     name="name-input"
                     id="name-input"
                 />
@@ -89,9 +89,11 @@ const Label = styled.label`
     display: block;
     margin-bottom: 0.5rem;
 `;
+
 const LargeSpan = styled.span`
     grid-column: span 2;
 `;
+
 const SmallSpan = styled.span`
     grid-column: span 1;
 
